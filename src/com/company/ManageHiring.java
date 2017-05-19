@@ -1,4 +1,6 @@
 package com.company;
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,14 @@ public class ManageHiring {
 
     public static void main(String[] args) throws StatusException, OdometerException, IOException {
         inputProjects();                 // Part C - Section III - Reading from files
+        addCustomer();
 //        showMenu();                      // Part B - Section III - Show Menu
-//        outputProjects();                // Part C - Section III - Writing to files
-        
+        outputProjects();                // Part C - Section III - Writing to files
+
+        for (int i = 0; i<customers.size(); i++) {
+            System.out.println("Print  " + customers.get(i).convertToString());
+        }
+
     }
 
     // Part C - Section III - Show Menu:
@@ -228,6 +235,113 @@ public class ManageHiring {
         return validation;
     }
 
+    // Part C - Section III - (2) - Adding new Customer:
+    public static void addCustomer() {
+        System.out.println("You are adding new Vehicle ");
+        if (!isCopCustomer()) {
+            addIndCus();
+        } else {
+            addCopCus();
+        }
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Corporate Customer Or Not:
+    public static boolean isCopCustomer() {
+        boolean returnBool = false;
+        System.out.println("Is it Corporate Customer (Y/N) ");
+        String isCopCus = keyboard.nextLine();
+        switch (isCopCus) {
+            case "Y":
+                returnBool = true;
+                break;
+            case "N":
+                returnBool = false;
+                break;
+        }
+        return returnBool;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Individual Customer:
+    public static void addIndCus() {
+        System.out.println("You are adding new Individual Customer");
+        String newID = addNewCusID();
+        String newName = addNewCusName();
+        String newPhone = addNewCusPhone();
+        double newPastMilage = 1;
+
+        ICustomer newICus = new ICustomer(newID, newName, newPhone, newPastMilage);
+        customers.add((countCus + countAddNewCus), newICus);
+        countAddNewCus++;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Individual Customer:
+    public static void addCopCus() {
+        System.out.println("Adding..");
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Add new customerID :
+    public static String addNewCusID() {
+        String cusID = enterCusID();
+        while (!cusIsValidation(cusID)) {
+            cusID = enterCusID();
+        }
+        return cusID;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Enter new customerID:
+    public static String enterCusID() {
+        System.out.println("Enter Customer ID: ");
+        String cusID = keyboard.nextLine();
+        String capCusID = cusID.substring(0, 1).toUpperCase() + cusID.substring(1);
+        return capCusID;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Input Validation:
+    public static boolean cusIsValidation(String cusID) {
+        boolean validation = false;
+        int cusCheckPos = checCusExist(cusID);
+
+        if (cusID.length() != 6) {
+            validation = false;
+            System.out.println("Customer ID should be 6 characters!");
+        } else if (cusID.length() != 6 && cusID.charAt(0) != 'C') {
+            validation = false;
+            System.out.println("Customer ID has to be started with C");
+        } else if (cusID.length() == 6 && cusID.charAt(0) == 'C') {
+            if (cusCheckPos != -1) {
+                System.out.println("Customer ID is exist!");
+            } else if (cusCheckPos == -1){
+                validation = true;
+            }
+        }
+        return validation;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Check if Entering Customer ID is Exist in Customers Array:
+    public static int checCusExist(String vehicleID) {
+        int vehiclePostion = -1;
+        for (int i = 0; i < customers.size(); i++) {
+            if (customers.get(i).getCustomerID().equals(vehicleID)) {
+                vehiclePostion = i;
+            }
+        }
+        return vehiclePostion;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Add new Customer Name:
+    public static String addNewCusName() {
+        System.out.println("Enter New Customer Name: ");
+        String newCusName = keyboard.nextLine();
+        return newCusName;
+    }
+
+    // Part C - Section III - (2) - Adding new Customer - Add new Customer Phone:
+    public static String addNewCusPhone() {
+        System.out.println("Enter New Customer Phone: ");
+        String newCusName = keyboard.nextLine();
+        return newCusName;
+    }
+
     // Part C - Section III - (3) - Getting Floor and Ceiling for Searching by Daily Rate:
     public static void getFilterDailyRate() {
         System.out.println("Searching for car with Daily Rate FROM: ");
@@ -413,7 +527,7 @@ public class ManageHiring {
         Customer cusObjectInput;
         String[] cusArray = cusInput.trim().split("\\s*,\\s*");
 
-        if (Double.parseDouble(cusArray[cusArray.length-1]) >= 1) {
+        if (Double.parseDouble(cusArray[cusArray.length-1]) < 1) {
             cusObjectInput = new ICustomer(cusArray[0],cusArray[1], cusArray[2], Double.parseDouble(cusArray[3]));
         } else {
             cusObjectInput = new CCustomer(cusArray[0],cusArray[1], cusArray[2], Float.parseFloat(cusArray[3]));
@@ -443,7 +557,7 @@ public class ManageHiring {
             for (int i=countVeh; i<vehs.size(); i++) {
                 bw.write(vehs.get(i).convertToString() + newLine);
             }
-            System.out.println("Done");
+            System.out.println("Done writing to vehicle.txt");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -474,7 +588,7 @@ public class ManageHiring {
             for (int i=countCus; i<customers.size(); i++) {
                 bw.write(customers.get(i).convertToString() + newLine);
             }
-            System.out.println("Done");
+            System.out.println("Done writing to customer.txt");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

@@ -30,4 +30,8 @@ public class ICustomer extends Customer {
         }
         return discountAmout;
     }
+
+    public double getPastMileage() {
+        return pastMileage;
+    }
 }

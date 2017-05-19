@@ -9,9 +9,15 @@ package com.company;
 public class ICustomer extends Customer {
     private double pastMileage;
 
-    public ICustomer(String customerID, String customerName, double customerPhone, double pastMileage) {
+    public ICustomer(String customerID, String customerName, String customerPhone, double pastMileage) {
         super(customerID, customerName, customerPhone);
-        this.pastMileage = pastMileage;
+        this.pastMileage = 1;
+    }
+
+
+    @Override
+    public String convertToString() {
+        return super.convertToString() + this.pastMileage;
     }
 
     @Override

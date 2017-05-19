@@ -10,12 +10,22 @@ package com.company;
 public class Customer {
     private String customerID;
     private String customerName;
-    private double customerPhone;
+    private String customerPhone;
 
-    public Customer(String customerID, String customerName, double customerPhone) {
+    public Customer() {
+        this("C000000", "Default Name", "0449159695");
+    }
+
+    public Customer(String customerID, String customerName, String customerPhone) {
         this.customerID = customerID;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
+    }
+
+    public String convertToString() {
+        String convertOutput;
+        convertOutput = this.customerID + ", " + this.customerName + ", " + this.customerPhone + ", ";
+        return convertOutput;
     }
 
     public double getDiscount(double amount) {
@@ -30,7 +40,7 @@ public class Customer {
         return customerName;
     }
 
-    public double getCustomerPhone() {
+    public String getCustomerPhone() {
         return customerPhone;
     }
 }

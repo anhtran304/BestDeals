@@ -10,15 +10,20 @@ package com.company;
 public class CCustomer extends Customer{
     private float discountRate;
 
-    public CCustomer(String customerID, String customerName, double customerPhone, float discountRate) {
+    public CCustomer(String customerID, String customerName, String customerPhone, float discountRate) {
         super(customerID, customerName, customerPhone);
         this.discountRate = discountRate;
     }
 
     @Override
+    public String convertToString() {
+        return super.convertToString() + this.discountRate;
+    }
+
+    @Override
     public double getDiscount(double amount) {
         double copDiscountAmount;
-        copDiscountAmount = amount * this.discountRate/100;
+        copDiscountAmount = amount * this.discountRate;
         return copDiscountAmount;
     }
 

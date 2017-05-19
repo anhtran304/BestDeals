@@ -12,14 +12,19 @@ public class ManageHiring {
 
     public static Scanner keyboard = new Scanner(System.in);
     public static List<Vehicle> vehs = new ArrayList<>();
+    public static List<Customer> customers = new ArrayList<>();
+
     public static int countVeh = 0;
-    public static int countAddNew = 0;
+    public static int countAddNewVeh = 0;
+
+    public static int countCus = 0;
+    public static int countAddNewCus = 0;
 
     public static void main(String[] args) throws StatusException, OdometerException, IOException {
         inputProjects();                 // Part C - Section III - Reading from files
-        showMenu();                      // Part B - Section III - Show Menu
-        outputProjects();                // Part C - Section III - Writing to files
-
+//        showMenu();                      // Part B - Section III - Show Menu
+//        outputProjects();                // Part C - Section III - Writing to files
+        
     }
 
     // Part C - Section III - Show Menu:
@@ -28,7 +33,6 @@ public class ManageHiring {
         while (choice > 0 && choice < 7) {
             switch (choice) {
                 case 1:
-                    // Input validation must ensure that ID is 6 characters and unique
                     addVehicle();
                     break;
                 case 2:
@@ -135,8 +139,8 @@ public class ManageHiring {
         double newOdo = addNewOdo();
 
         Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo);
-        vehs.add((countVeh + countAddNew), newVeh);
-        countAddNew++;
+        vehs.add((countVeh + countAddNewVeh), newVeh);
+        countAddNewVeh++;
     }
 
     // Part C - Section III - (1) - Adding new Premium Vehicle:
@@ -151,8 +155,8 @@ public class ManageHiring {
         int newOdoLastService = addOdoLastService();
 
         PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService);
-        vehs.add((countVeh + countAddNew), newVeh);
-        countAddNew++;
+        vehs.add((countVeh + countAddNewVeh), newVeh);
+        countAddNewVeh++;
     }
 
     // Part C - Section III - (1) - Adding new Vehicle - Add New VehicleID:
@@ -205,7 +209,6 @@ public class ManageHiring {
         int newOdoLastService = keyboard.nextInt();
         return newOdoLastService;
     }
-
 
     // Part C - Section III - (1) - Adding new Vehicle - Input Validation:
     public static boolean vehIsValidation(String vehID) {
@@ -282,7 +285,7 @@ public class ManageHiring {
         return vehs.get(vehPos);
     }
 
-    // Part C - Section III -  Entering Vehicle ID:
+    // Part C - Section III - (4) - Hire Vehicle - Entering Vehicle ID:
     public static String enterVehicleID() {
         System.out.println("Enter Vehicle ID: ");
         String vehicleID = keyboard.nextLine();
@@ -366,37 +369,66 @@ public class ManageHiring {
         return enterOdoReading;
     }
 
-    // Part C - Section III - Reading from Vehicle.txt:
-    public static void inputProjects () throws FileNotFoundException {
-        File f = new File("vehicle.txt");
-        if (f.isFile()) {
-            Scanner sc = new Scanner(f);
+    // Part C - Section III - Reading from vehicle.txt and customer.txt:
+    public static void inputProjects () throws IOException {
+        File fileVeh = new File("vehicle.txt");
+        if (!fileVeh.exists()) {
+            fileVeh.createNewFile();
+        }
+        if (fileVeh.isFile()) {
+            Scanner sc = new Scanner(fileVeh);
             while (sc.hasNextLine()) {
                 vehs.add(countVeh, getVeh(sc.nextLine()));
                 countVeh++;
             }
             sc.close();
         }
-        else {
-            System.out.println("Could not find file: vehicle.txt");
+
+        File fileCus = new File("Customer.txt");
+        if (fileCus.isFile()) {
+            Scanner sc = new Scanner(fileCus);
+            while (sc.hasNextLine()) {
+                customers.add(countCus, getCus(sc.nextLine()));
+                countCus++;
+            }
+            sc.close();
         }
     }
 
     // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
     public static Vehicle getVeh(String vehInput) {
-        Vehicle vehsInput = new Vehicle();
+        Vehicle vehObjectInput = new Vehicle();
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
 
         if (vehArray.length == 4) {
-            vehsInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]));
+            vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]));
         } else if (vehArray.length == 7) {
-            vehsInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Integer.parseInt(vehArray[4]), Integer.parseInt(vehArray[5]), Integer.parseInt(vehArray[6]));
+            vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Double.parseDouble(vehArray[4]), Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]));
         }
-        return vehsInput;
+        return vehObjectInput;
+    }
+
+    // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
+    public static Customer getCus(String cusInput) {
+        Customer cusObjectInput;
+        String[] cusArray = cusInput.trim().split("\\s*,\\s*");
+
+        if (Double.parseDouble(cusArray[cusArray.length-1]) >= 1) {
+            cusObjectInput = new ICustomer(cusArray[0],cusArray[1], cusArray[2], Double.parseDouble(cusArray[3]));
+        } else {
+            cusObjectInput = new CCustomer(cusArray[0],cusArray[1], cusArray[2], Float.parseFloat(cusArray[3]));
+        }
+        return cusObjectInput;
     }
 
     // Part C - Section III - Writing to files:
     public static void outputProjects() throws IOException {
+        writingToVeh();
+        writingToCus();
+    }
+
+    // Part C - Section III - Writing to files - Writing to vehicle.txt:
+    public static void writingToVeh() {
         BufferedWriter bw = null;
         FileWriter fw = null;
         String newLine = System.getProperty("line.separator");
@@ -410,6 +442,37 @@ public class ManageHiring {
             bw = new BufferedWriter(fw);
             for (int i=countVeh; i<vehs.size(); i++) {
                 bw.write(vehs.get(i).convertToString() + newLine);
+            }
+            System.out.println("Done");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    // Part C - Section III - Writing to files - Writing to customer.txt:
+    public static void writingToCus() {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        String newLine = System.getProperty("line.separator");
+
+        try {
+            File file = new File("customer.txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            for (int i=countCus; i<customers.size(); i++) {
+                bw.write(customers.get(i).convertToString() + newLine);
             }
             System.out.println("Done");
         } catch (IOException e) {

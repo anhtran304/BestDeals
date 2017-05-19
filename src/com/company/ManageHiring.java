@@ -17,6 +17,8 @@ public class ManageHiring {
 
     public static void main(String[] args) throws StatusException, OdometerException, FileNotFoundException {
         inputProjects();                 // Part C - Section III - Reading from files
+
+        addVehicle();
 //        showMenu();                      // Part B - Section III - Show Menu
 //        outputProjects();                // Part C - Section III - Writing to files
 
@@ -29,11 +31,11 @@ public class ManageHiring {
             switch (choice) {
                 case 1:
                     // Input validation must ensure that ID is 6 characters and unique
-//                    addNewVehicle();
+                    addVehicle();
                     break;
                 case 2:
                     // Input validation must ensure ID is 6 characters, unique and starts with C
-//                    addNewCustomer();
+//                    addCustomer();
                     break;
                 case 3:
                     getFilterDailyRate();
@@ -100,6 +102,134 @@ public class ManageHiring {
         return anymoreChoice;
     }
 
+    // Part C - Section III - (1) - Adding new Vehicle:
+    public static void addVehicle() {
+        System.out.println("You are adding new Vehicle ");
+        if (!isPremiumVeh()) {
+            addNormalVeh();
+        } else {
+            addPremiumVeh();
+        }
+    }
+
+    // Part C - Section III - (1) - Adding new Vehicle - Vehicle Premium Or Not:
+    public static boolean isPremiumVeh() {
+        boolean returnBool = false;
+        System.out.println("Is it Premium Vehicle (Y/N) ");
+        String isPremium = keyboard.nextLine();
+        switch (isPremium) {
+            case "Y":
+                returnBool = true;
+                break;
+            case "N":
+                returnBool = false;
+                break;
+        }
+        return returnBool;
+    }
+
+    // Part C - Section III - (1) - Adding new Normal Vehicle:
+    public static void addNormalVeh() {
+        System.out.println("You are adding new Normal Vehicle");
+        String newVehID = addNewVehID();
+        String newDes = addNewDes();
+        double newDailyRate = addNewDailyRate();
+        double newOdo = addNewOdo();
+
+        Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo);
+        vehs.add((countVeh), newVeh);
+        countVeh++;
+    }
+
+
+    // Part C - Section III - (1) - Adding new Premium Vehicle:
+    public static void addPremiumVeh() {
+        System.out.println("You are adding new Premium Vehicle");
+        String newVehID = addNewVehID();
+        String newDes = addNewDes();
+        double newDailyRate = addNewDailyRate();
+        double newOdo = addNewOdo();
+        int newDailyMileage = addDailyMileage();
+        int newServiceLength = addServiceLength();
+        int newOdoLastService = addOdoLastService();
+
+        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService);
+        vehs.add((countVeh), newVeh);
+        countVeh++;
+    }
+
+
+
+    // Part C - Section III - (1) - Adding new Vehicle - Add New VehicleID:
+    public static String addNewVehID() {
+        String enterVehID = enterVehicleID();
+        while (!vehIsValidation(enterVehID)) {
+            enterVehID = enterVehicleID();
+        }
+        return enterVehID;
+    }
+
+    // Part C - Section III - (1) - Adding new Vehicle - Add New Description:
+    public static String addNewDes() {
+        System.out.println("Enter New Description: ");
+        String newDescription = keyboard.nextLine();
+        return newDescription;
+    }
+
+    // Part C - Section III - (1) - Adding new Vehicle - Add New Daily Rate:
+    public static double addNewDailyRate() {
+        System.out.println("Enter New Daily Rate: ");
+        double newDailyRate = keyboard.nextDouble();
+        return newDailyRate;
+    }
+
+    // Part C - Section III - (1) - Adding new Vehicle - Add New Odometer:
+    public static double addNewOdo() {
+        System.out.println("Enter New Odometer: ");
+        double newOdo = keyboard.nextDouble();
+        return newOdo;
+    }
+
+    // Part C - Section III - (1) - Adding new Premium Vehicle - Add Daily Mileage:
+    public static int addDailyMileage() {
+        System.out.println("Enter New Daily Mileage: ");
+        int newDailyMileage = keyboard.nextInt();
+        return newDailyMileage;
+    }
+
+    // Part C - Section III - (1) - Adding new Premium Vehicle - Add New Service Length:
+    public static int addServiceLength() {
+        System.out.println("Enter New Service Length: ");
+        int newServiceLength = keyboard.nextInt();
+        return newServiceLength;
+    }
+
+    // Part C - Section III - (1) - Adding new Premium Vehicle - Add New Odo Last Service:
+    public static int addOdoLastService() {
+        System.out.println("Enter New Service Length: ");
+        int newOdoLastService = keyboard.nextInt();
+        return newOdoLastService;
+    }
+
+
+    // Part C - Section III - (1) - Adding new Vehicle - Input Validation:
+    public static boolean vehIsValidation(String vehID) {
+        boolean validation = false;
+        int vehCheckPos = checkVehicleExist(vehID);
+
+        if (vehID.length() != 6) {
+            validation = false;
+            System.out.println("VehicleID should be 6 characters!");
+        } else if (vehID.length() == 6) {
+            if (vehCheckPos != -1) {
+                System.out.println("Vehicle ID is exist!");
+            } else if (vehCheckPos == -1){
+                validation = true;
+            }
+        }
+        return validation;
+    }
+
     // Part C - Section III - (3) - Getting Floor and Ceiling for Searching by Daily Rate:
     public static void getFilterDailyRate() {
         System.out.println("Searching for car with Daily Rate FROM: ");
@@ -149,25 +279,28 @@ public class ManageHiring {
 
     // Part C - Section III - (4) - Hire Vehicle - Return Vehicle if correctly Entering Vehicle ID:
     public static Vehicle getVehicle() {
-        int vehPos = - 1;
-        while (vehPos == -1) {
-            vehPos = checkVehicleExist();
+        int vehPos = checkVehicleExist(enterVehicleID());
+        while (vehPos == - 1) {
+            System.out.println("Vehicle is not exist!");
+            vehPos = checkVehicleExist(enterVehicleID());
         }
         return vehs.get(vehPos);
     }
 
-    // Part C - Section III - (4) - Hire Vehicle - Check if Entering Vehicle ID is Exist in Vehs Array
-    public static int checkVehicleExist() {
-        int vehiclePostion = -1;
+    // Part C - Section III -  Entering Vehicle ID:
+    public static String enterVehicleID() {
         System.out.println("Enter Vehicle ID: ");
         String vehicleID = keyboard.nextLine();
+        return vehicleID;
+    }
+
+    // Part C - Section III - (4) - Hire Vehicle - Check if Entering Vehicle ID is Exist in Vehs Array:
+    public static int checkVehicleExist(String vehicleID) {
+        int vehiclePostion = -1;
         for (int i = 0; i < vehs.size(); i++) {
             if (vehs.get(i).getID().equals(vehicleID)) {
                 vehiclePostion = i;
             }
-        }
-        if (vehiclePostion == -1) {
-            System.out.println("Vehicle with ID: " + vehicleID + " is not exist!");
         }
         return vehiclePostion;
     }
@@ -244,9 +377,8 @@ public class ManageHiring {
         File f = new File("vehicle.txt");
         if (f.isFile()) {
             Scanner sc = new Scanner(f);
-            StringBuilder sb = new StringBuilder();
             while (sc.hasNextLine()) {
-                vehs.add(countVeh, createVeh(sc.nextLine()));
+                vehs.add(countVeh, getVeh(sc.nextLine()));
                 countVeh++;
             }
             sc.close();
@@ -254,11 +386,10 @@ public class ManageHiring {
         else {
             System.out.println("could not find file: vehicle.txt");
         }
-        reader.close();
     }
 
-    // Part C - Section III - Reading from files - Create Vehicle Object from Reading Vehicle.txt
-    public static Vehicle createVeh(String vehInput) {
+    // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
+    public static Vehicle getVeh(String vehInput) {
         Vehicle vehsInput = new Vehicle();
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
 

@@ -1,4 +1,8 @@
 package com.company;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -8,13 +12,14 @@ import java.util.Scanner;
 public class ManageHiring {
 
     public static Scanner keyboard = new Scanner(System.in);
-    public static int numberVeh;
-    public static Vehicle[] vehs = new Vehicle[numberVeh];
+    public static List<Vehicle> vehs = new ArrayList<>();
+    public static int countVeh = 0;
 
-    public static void main(String[] args) throws StatusException, OdometerException {
+    public static void main(String[] args) throws StatusException, OdometerException, FileNotFoundException {
         inputProjects();                 // Part C - Section III - Reading from files
-        showMenu();                      // Part B - Section III - Show Menu
-        outputProjects();                // Part C - Section III - Writing to files
+//        showMenu();                      // Part B - Section III - Show Menu
+//        outputProjects();                // Part C - Section III - Writing to files
+
     }
 
     // Part C - Section III - Show Menu:
@@ -116,9 +121,9 @@ public class ManageHiring {
     public static void filterDailyRate(double floorRate, double ceilingRate) {
         int count = 0;
         System.out.println("List the vehicles with Daily Rate between " + floorRate + " and " + ceilingRate + ": ");
-        for (int i=0; i<=vehs.length; i++) {
-            if (floorRate <= vehs[i].getDailyRate() && vehs[i].getDailyRate() <= ceilingRate) {
-                System.out.println("ID: " + vehs[i].getID() + "  -  " + "Description: " + vehs[i].getDescription() + "  -  " + "Daily rate: " + vehs[i].getDailyRate());
+        for (int i=0; i<=vehs.size(); i++) {
+            if (floorRate <= vehs.get(i).getDailyRate() && vehs.get(i).getDailyRate() <= ceilingRate) {
+                System.out.println("ID: " + vehs.get(i).getID() + "  -  " + "Description: " + vehs.get(i).getDescription() + "  -  " + "Daily rate: " + vehs.get(i).getDailyRate());
                 count++;
             }
         }
@@ -148,7 +153,7 @@ public class ManageHiring {
         while (vehPos == -1) {
             vehPos = checkVehicleExist();
         }
-        return vehs[vehPos];
+        return vehs.get(vehPos);
     }
 
     // Part C - Section III - (4) - Hire Vehicle - Check if Entering Vehicle ID is Exist in Vehs Array
@@ -156,8 +161,8 @@ public class ManageHiring {
         int vehiclePostion = -1;
         System.out.println("Enter Vehicle ID: ");
         String vehicleID = keyboard.nextLine();
-        for (int i = 0; i < vehs.length; i++) {
-            if (vehs[i].getID().equals(vehicleID)) {
+        for (int i = 0; i < vehs.size(); i++) {
+            if (vehs.get(i).getID().equals(vehicleID)) {
                 vehiclePostion = i;
             }
         }
@@ -233,9 +238,36 @@ public class ManageHiring {
         return enterOdoReading;
     }
 
-    // Part C - Section III - Reading from files:
-    public static void inputProjects () {
-        System.out.println("Reading from files...");
+    // Part C - Section III - Reading from Vehicle.txt:
+    public static void inputProjects () throws FileNotFoundException {
+        Scanner reader = new Scanner(System.in);
+        File f = new File("vehicle.txt");
+        if (f.isFile()) {
+            Scanner sc = new Scanner(f);
+            StringBuilder sb = new StringBuilder();
+            while (sc.hasNextLine()) {
+                vehs.add(countVeh, createVeh(sc.nextLine()));
+                countVeh++;
+            }
+            sc.close();
+        }
+        else {
+            System.out.println("could not find file: vehicle.txt");
+        }
+        reader.close();
+    }
+
+    // Part C - Section III - Reading from files - Create Vehicle Object from Reading Vehicle.txt
+    public static Vehicle createVeh(String vehInput) {
+        Vehicle vehsInput = new Vehicle();
+        String[] vehArray = vehInput.trim().split("\\s*,\\s*");
+
+        if (vehArray.length == 4) {
+            vehsInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]));
+        } else if (vehArray.length == 7) {
+            vehsInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Integer.parseInt(vehArray[4]), Integer.parseInt(vehArray[5]), Integer.parseInt(vehArray[6]));
+        }
+        return vehsInput;
     }
 
     // Part C - Section III - Writing to files:

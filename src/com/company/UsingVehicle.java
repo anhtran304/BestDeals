@@ -17,7 +17,7 @@ public class UsingVehicle {
 //        hireCompleteVeh();        // Part A - Section II - (iv) - 2. Complete Hire
 //        serviceVeh();             // Part A - Section II - (iv) - 3. Service Vehicle
 //        serviceCompleteVeh();     // Part A - Section II - (iv) - 4. Complete Service
-        showMenu();                 // Part A - Section II - (v) - Show menu and asking anymore transactions
+//        showMenu();                 // Part A - Section II - (v) - Show menu and asking anymore transactions
 //        printAllVehs();           // Part A - Section II - (vi) - Printing final detail of all vehicles with print method
 
     }

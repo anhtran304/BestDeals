@@ -92,6 +92,11 @@ public class Vehicle {
         }
     }
 
+    public String convertToString() {
+        String convertOutput;
+        convertOutput = this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer();
+        return convertOutput;
+    }
 
     public String getID() {
         return ID;

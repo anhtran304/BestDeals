@@ -1,6 +1,5 @@
 package com.company;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,13 +13,12 @@ public class ManageHiring {
     public static Scanner keyboard = new Scanner(System.in);
     public static List<Vehicle> vehs = new ArrayList<>();
     public static int countVeh = 0;
+    public static int countAddNew = 0;
 
-    public static void main(String[] args) throws StatusException, OdometerException, FileNotFoundException {
+    public static void main(String[] args) throws StatusException, OdometerException, IOException {
         inputProjects();                 // Part C - Section III - Reading from files
-
-        addVehicle();
-//        showMenu();                      // Part B - Section III - Show Menu
-//        outputProjects();                // Part C - Section III - Writing to files
+        showMenu();                      // Part B - Section III - Show Menu
+        outputProjects();                // Part C - Section III - Writing to files
 
     }
 
@@ -137,10 +135,9 @@ public class ManageHiring {
         double newOdo = addNewOdo();
 
         Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo);
-        vehs.add((countVeh), newVeh);
-        countVeh++;
+        vehs.add((countVeh + countAddNew), newVeh);
+        countAddNew++;
     }
-
 
     // Part C - Section III - (1) - Adding new Premium Vehicle:
     public static void addPremiumVeh() {
@@ -154,11 +151,9 @@ public class ManageHiring {
         int newOdoLastService = addOdoLastService();
 
         PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService);
-        vehs.add((countVeh), newVeh);
-        countVeh++;
+        vehs.add((countVeh + countAddNew), newVeh);
+        countAddNew++;
     }
-
-
 
     // Part C - Section III - (1) - Adding new Vehicle - Add New VehicleID:
     public static String addNewVehID() {
@@ -206,7 +201,7 @@ public class ManageHiring {
 
     // Part C - Section III - (1) - Adding new Premium Vehicle - Add New Odo Last Service:
     public static int addOdoLastService() {
-        System.out.println("Enter New Service Length: ");
+        System.out.println("Enter Odometer Last Service : ");
         int newOdoLastService = keyboard.nextInt();
         return newOdoLastService;
     }
@@ -373,7 +368,6 @@ public class ManageHiring {
 
     // Part C - Section III - Reading from Vehicle.txt:
     public static void inputProjects () throws FileNotFoundException {
-        Scanner reader = new Scanner(System.in);
         File f = new File("vehicle.txt");
         if (f.isFile()) {
             Scanner sc = new Scanner(f);
@@ -384,7 +378,7 @@ public class ManageHiring {
             sc.close();
         }
         else {
-            System.out.println("could not find file: vehicle.txt");
+            System.out.println("Could not find file: vehicle.txt");
         }
     }
 
@@ -402,9 +396,34 @@ public class ManageHiring {
     }
 
     // Part C - Section III - Writing to files:
-    public static void outputProjects() {
-        System.out.println("Writing to files...");
-    }
+    public static void outputProjects() throws IOException {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        String newLine = System.getProperty("line.separator");
 
+        try {
+            File file = new File("vehicle.txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            for (int i=countVeh; i<vehs.size(); i++) {
+                bw.write(vehs.get(i).convertToString() + newLine);
+            }
+            System.out.println("Done");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
 }
 

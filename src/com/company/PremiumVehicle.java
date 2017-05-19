@@ -53,6 +53,11 @@ public class PremiumVehicle extends Vehicle {
         System.out.println("Mileage Allowance: " + this.dailyMileage + "   " + "Service Length: " + this.serviceLength + "   " + "Last Service: " + this.odoLastService);
     }
 
+    @Override
+    public String convertToString() {
+        return super.convertToString() + ", " + this.getDailyMileage() + ", " + this.getServiceLength() + ", " + this.getOdoLastService();
+    }
+
     public double getDailyMileage() {
         return dailyMileage;
     }

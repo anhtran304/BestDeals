@@ -23,14 +23,8 @@ public class ManageHiring {
     public static void main(String[] args) throws StatusException, OdometerException, IOException {
         inputProjects();                 // Part C - Section III - Reading from files
 //        addVehicle();
-        addCustomer();
-//        showMenu();                      // Part B - Section III - Show Menu
+        showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
-
-        for (int i = 0; i<customers.size(); i++) {
-            System.out.println("Print  " + customers.get(i).convertToString());
-        }
-
     }
 
     // Part C - Section III - Show Menu:
@@ -42,8 +36,7 @@ public class ManageHiring {
                     addVehicle();
                     break;
                 case 2:
-                    // Input validation must ensure ID is 6 characters, unique and starts with C
-//                    addCustomer();
+                    addCustomer();
                     break;
                 case 3:
                     getFilterDailyRate();
@@ -61,7 +54,7 @@ public class ManageHiring {
                     serviceCompleteVeh();
                     break;
                 case 8:
-                    System.exit(0);
+                    break;
             }
             choice = anymoreTrans();
         }
@@ -71,7 +64,7 @@ public class ManageHiring {
         printMenu();
         int optionMenu = keyboard.nextInt();
         keyboard.nextLine();
-        while (!(optionMenu > 0 && optionMenu < 7)) {
+        while (!(optionMenu > 0 && optionMenu < 9)) {
             System.out.println("Your option is not exist! Back to Main Menu");
             printMenu();
             optionMenu = keyboard.nextInt();
@@ -104,7 +97,6 @@ public class ManageHiring {
                 anymoreChoice = choiceMenu();
                 break;
             case 'N':
-                System.exit(0);
                 break;
         }
         return anymoreChoice;
@@ -143,8 +135,9 @@ public class ManageHiring {
         String newDes = addNewDes();
         double newDailyRate = addNewDailyRate();
         double newOdo = addNewOdo();
+        String status = "A";
 
-        Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo);
+        Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo, status);
         vehs.add((countVeh + countAddNewVeh), newVeh);
         countAddNewVeh++;
     }
@@ -159,8 +152,9 @@ public class ManageHiring {
         int newDailyMileage = addDailyMileage();
         int newServiceLength = addServiceLength();
         int newOdoLastService = addOdoLastService();
+        String status = "A";
 
-        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService);
+        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService, status);
         vehs.add((countVeh + countAddNewVeh), newVeh);
         countAddNewVeh++;
     }
@@ -235,13 +229,15 @@ public class ManageHiring {
     }
 
     // Part C - Section III - (2) - Adding new Customer:
-    public static void addCustomer() {
+    public static String addCustomer() {
         System.out.println("You are adding new Customer: ");
+        String newCusID;
         if (!isCopCustomer()) {
-            addIndCus();
+            newCusID = addIndCus();
         } else {
-            addCopCus();
+            newCusID = addCopCus();
         }
+        return newCusID;
     }
 
     // Part C - Section III - (2) - Adding new Customer - Corporate Customer Or Not:
@@ -261,7 +257,7 @@ public class ManageHiring {
     }
 
     // Part C - Section III - (2) - Adding new Customer - Individual Customer:
-    public static void addIndCus() {
+    public static String addIndCus() {
         System.out.println("You are adding new Individual Customer");
         String newID = addNewCusID();
         String newName = addNewCusName();
@@ -271,10 +267,11 @@ public class ManageHiring {
         ICustomer newICus = new ICustomer(newID, newName, newPhone, newPastMilage);
         customers.add((countCus + countAddNewCus), newICus);
         countAddNewCus++;
+        return newID;
     }
 
     // Part C - Section III - (2) - Adding new Customer - Individual Customer:
-    public static void addCopCus() {
+    public static String addCopCus() {
         System.out.println("You are adding new Corporate Customer");
         String newID = addNewCusID();
         String newName = addNewCusName();
@@ -289,6 +286,7 @@ public class ManageHiring {
         CCustomer newICus = new CCustomer(newID, newName, newPhone, newDiscountRate);
         customers.add((countCus + countAddNewCus), newICus);
         countAddNewCus++;
+        return newID;
     }
 
     // Part C - Section III - (2) - Adding new Customer - Add new customerID :
@@ -382,7 +380,7 @@ public class ManageHiring {
     public static void filterDailyRate(double floorRate, double ceilingRate) {
         int count = 0;
         System.out.println("List the vehicles with Daily Rate between " + floorRate + " and " + ceilingRate + ": ");
-        for (int i=0; i<=vehs.size(); i++) {
+        for (int i=0; i< vehs.size(); i++) {
             if (floorRate <= vehs.get(i).getDailyRate() && vehs.get(i).getDailyRate() <= ceilingRate) {
                 System.out.println("ID: " + vehs.get(i).getID() + "  -  " + "Description: " + vehs.get(i).getDescription() + "  -  " + "Daily rate: " + vehs.get(i).getDailyRate());
                 count++;
@@ -398,11 +396,20 @@ public class ManageHiring {
         System.out.println("You are hiring vehicle");
         Vehicle veh = getVehicle();
         try {
-            if (!(veh.getStatus() == "A")) {
+            if (!veh.getStatus().equals("A")) {
                 throw new StatusException("Vehicle is not available");
             }
-            veh.hire(enterHirerID());
-            veh.print();
+            String hirerID = enterHirerID();
+            if (checCusExist(hirerID) != -1) {
+                veh.hire(hirerID);
+                veh.print();
+            } else if (checCusExist(hirerID) == -1){
+                System.out.println("Customer ID is not exist");
+                // Do you want to add newCus (Y/N)?
+                veh.hire(addCustomer());
+                veh.print();
+            }
+
         } catch (StatusException e) {
             System.out.println("Vehicle could not be hired! " + e);
         }
@@ -449,7 +456,7 @@ public class ManageHiring {
         Vehicle veh = getVehicle();
 
         try {
-            if (!(veh.getStatus() == "H")) {
+            if (!(veh.getStatus().equals("H"))) {
                 throw new StatusException("Vehicle is not being hired");
             }
             double enterOdo = enterOdoReading();
@@ -526,6 +533,9 @@ public class ManageHiring {
             }
             sc.close();
         }
+        for (int i = 0; i<vehs.size(); i++) {
+            vehs.get(i).print();
+        }
     }
 
     // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
@@ -533,10 +543,10 @@ public class ManageHiring {
         Vehicle vehObjectInput = new Vehicle();
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
 
-        if (vehArray.length == 4) {
-            vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]));
-        } else if (vehArray.length == 7) {
-            vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Double.parseDouble(vehArray[4]), Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]));
+        if (vehArray.length == 5) {
+            vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
+        } else if (vehArray.length == 8) {
+            vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Double.parseDouble(vehArray[4]), Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]), vehArray[7]);
         }
         return vehObjectInput;
     }
@@ -570,10 +580,10 @@ public class ManageHiring {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            fw = new FileWriter(file.getAbsoluteFile(), true);
+            fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
             String newLine = System.getProperty("line.separator");
-            for (int i=countVeh; i<vehs.size(); i++) {
+            for (int i=0; i<vehs.size(); i++) {
                 bw.write(vehs.get(i).convertToString() + newLine);
             }
             System.out.println("Done writing to vehicle.txt");
@@ -601,11 +611,11 @@ public class ManageHiring {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            fw = new FileWriter(file.getAbsoluteFile(), true);
+            fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
             String newLine = System.getProperty("line.separator");
 
-            for (int i=countCus; i<customers.size(); i++) {
+            for (int i=0; i<customers.size(); i++) {
                 bw.write(customers.get(i).convertToString() + newLine);
             }
             System.out.println("Done writing to customer.txt");

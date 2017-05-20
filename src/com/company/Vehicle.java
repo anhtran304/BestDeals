@@ -16,13 +16,21 @@ public class Vehicle {
     private Date dateHire;
 
     public Vehicle() {
-        this("000000", "Default", 0, 0);
+        this("000000", "Default", 0, 0, "A");
     }
 
     public Vehicle(String ID, String description, double dailyRate, double odometer) {
         this.ID = ID;
         this.description = description;
-        this.status = "A";
+        this.dailyRate = dailyRate;
+        this.odometer = odometer;
+        this.status ="A";
+    }
+
+    public Vehicle(String ID, String description, double dailyRate, double odometer, String status) {
+        this.ID = ID;
+        this.description = description;
+        this.status = status;
         this.dailyRate = dailyRate;
         this.odometer = odometer;
     }
@@ -94,7 +102,7 @@ public class Vehicle {
 
     public String convertToString() {
         String convertOutput;
-        convertOutput = this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer();
+        convertOutput = this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer() + ", " + this.getStatus();
         return convertOutput;
     }
 

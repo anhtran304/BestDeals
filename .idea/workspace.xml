@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da876ead-84aa-4678-bf16-7270eb2859ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ICustomer.java" afterPath="$PROJECT_DIR$/src/com/company/ICustomer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer.txt" afterPath="$PROJECT_DIR$/customer.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ManageHiring.java" afterPath="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle.txt" afterPath="$PROJECT_DIR$/vehicle.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +25,8 @@
       <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1433">
-              <caret line="560" column="33" lean-forward="true" selection-start-line="560" selection-start-column="33" selection-end-line="560" selection-end-column="33" />
+            <state relative-caret-position="-565">
+              <caret line="269" column="43" lean-forward="true" selection-start-line="269" selection-start-column="43" selection-end-line="269" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
@@ -41,13 +44,15 @@
                 <element signature="method#addDailyMileage#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-                <element signature="e#9827#9828#0" expanded="true" />
-                <element signature="e#9873#9874#0" expanded="true" />
                 <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#hireVeh#0;class#ManageHiring#0" expanded="false" />
@@ -61,8 +66,9 @@
                 <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -417,7 +423,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3783784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3783784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -443,7 +449,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -553,8 +559,8 @@
         <state relative-caret-position="435">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="false" />
+            <element signature="e#578#579#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -582,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1433">
-          <caret line="560" column="33" lean-forward="true" selection-start-line="560" selection-start-column="33" selection-end-line="560" selection-end-column="33" />
+        <state relative-caret-position="-565">
+          <caret line="269" column="43" lean-forward="true" selection-start-line="269" selection-start-column="43" selection-end-line="269" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
@@ -601,13 +607,15 @@
             <element signature="method#addDailyMileage#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="e#9827#9828#0" expanded="true" />
-            <element signature="e#9873#9874#0" expanded="true" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#hireVeh#0;class#ManageHiring#0" expanded="false" />
@@ -621,8 +629,9 @@
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>

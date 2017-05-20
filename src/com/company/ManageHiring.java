@@ -24,6 +24,7 @@ public class ManageHiring {
 
     public static void main(String[] args) throws StatusException, OdometerException, IOException {
         inputProjects();                 // Part C - Section III - Reading from files
+//        addVehicle();
         addCustomer();
 //        showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
@@ -113,7 +114,7 @@ public class ManageHiring {
 
     // Part C - Section III - (1) - Adding new Vehicle:
     public static void addVehicle() {
-        System.out.println("You are adding new Vehicle ");
+        System.out.println("You are adding new Vehicle: ");
         if (!isPremiumVeh()) {
             addNormalVeh();
         } else {
@@ -124,7 +125,7 @@ public class ManageHiring {
     // Part C - Section III - (1) - Adding new Vehicle - Vehicle Premium Or Not:
     public static boolean isPremiumVeh() {
         boolean returnBool = false;
-        System.out.println("Is it Premium Vehicle (Y/N) ");
+        System.out.println("Is it Premium Vehicle? (Y/N) ");
         String isPremium = keyboard.nextLine();
         switch (isPremium) {
             case "Y":
@@ -237,7 +238,7 @@ public class ManageHiring {
 
     // Part C - Section III - (2) - Adding new Customer:
     public static void addCustomer() {
-        System.out.println("You are adding new Vehicle ");
+        System.out.println("You are adding new Customer: ");
         if (!isCopCustomer()) {
             addIndCus();
         } else {
@@ -248,7 +249,7 @@ public class ManageHiring {
     // Part C - Section III - (2) - Adding new Customer - Corporate Customer Or Not:
     public static boolean isCopCustomer() {
         boolean returnBool = false;
-        System.out.println("Is it Corporate Customer (Y/N) ");
+        System.out.println("Is it Corporate Customer? (Y/N) ");
         String isCopCus = keyboard.nextLine();
         switch (isCopCus) {
             case "Y":
@@ -304,7 +305,7 @@ public class ManageHiring {
         if (cusID.length() != 6) {
             validation = false;
             System.out.println("Customer ID should be 6 characters!");
-        } else if (cusID.length() != 6 && cusID.charAt(0) != 'C') {
+        } else if (cusID.length() == 6 && cusID.charAt(0) != 'C') {
             validation = false;
             System.out.println("Customer ID has to be started with C");
         } else if (cusID.length() == 6 && cusID.charAt(0) == 'C') {
@@ -498,7 +499,7 @@ public class ManageHiring {
             sc.close();
         }
 
-        File fileCus = new File("Customer.txt");
+        File fileCus = new File("customer.txt");
         if (fileCus.isFile()) {
             Scanner sc = new Scanner(fileCus);
             while (sc.hasNextLine()) {
@@ -545,7 +546,6 @@ public class ManageHiring {
     public static void writingToVeh() {
         BufferedWriter bw = null;
         FileWriter fw = null;
-        String newLine = System.getProperty("line.separator");
 
         try {
             File file = new File("vehicle.txt");
@@ -554,6 +554,7 @@ public class ManageHiring {
             }
             fw = new FileWriter(file.getAbsoluteFile(), true);
             bw = new BufferedWriter(fw);
+            String newLine = System.getProperty("line.separator");
             for (int i=countVeh; i<vehs.size(); i++) {
                 bw.write(vehs.get(i).convertToString() + newLine);
             }
@@ -576,7 +577,6 @@ public class ManageHiring {
     public static void writingToCus() {
         BufferedWriter bw = null;
         FileWriter fw = null;
-        String newLine = System.getProperty("line.separator");
 
         try {
             File file = new File("customer.txt");
@@ -585,6 +585,8 @@ public class ManageHiring {
             }
             fw = new FileWriter(file.getAbsoluteFile(), true);
             bw = new BufferedWriter(fw);
+            String newLine = System.getProperty("line.separator");
+
             for (int i=countCus; i<customers.size(); i++) {
                 bw.write(customers.get(i).convertToString() + newLine);
             }

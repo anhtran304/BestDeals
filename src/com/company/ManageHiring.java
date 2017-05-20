@@ -1,6 +1,4 @@
 package com.company;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -268,7 +266,7 @@ public class ManageHiring {
         String newID = addNewCusID();
         String newName = addNewCusName();
         String newPhone = addNewCusPhone();
-        double newPastMilage = 1;
+        double newPastMilage = 0;
 
         ICustomer newICus = new ICustomer(newID, newName, newPhone, newPastMilage);
         customers.add((countCus + countAddNewCus), newICus);
@@ -277,7 +275,20 @@ public class ManageHiring {
 
     // Part C - Section III - (2) - Adding new Customer - Individual Customer:
     public static void addCopCus() {
-        System.out.println("Adding..");
+        System.out.println("You are adding new Corporate Customer");
+        String newID = addNewCusID();
+        String newName = addNewCusName();
+        String newPhone = addNewCusPhone();
+        float newDiscountRate = addNewDiscountRate();
+
+        while (newDiscountRate >= 1 || newDiscountRate <= 0) {
+            System.out.println("Discount rate should smaller than 100%, and bigger than 0%");
+            newDiscountRate = addNewDiscountRate();
+        }
+
+        CCustomer newICus = new CCustomer(newID, newName, newPhone, newDiscountRate);
+        customers.add((countCus + countAddNewCus), newICus);
+        countAddNewCus++;
     }
 
     // Part C - Section III - (2) - Adding new Customer - Add new customerID :
@@ -319,14 +330,14 @@ public class ManageHiring {
     }
 
     // Part C - Section III - (2) - Adding new Customer - Check if Entering Customer ID is Exist in Customers Array:
-    public static int checCusExist(String vehicleID) {
-        int vehiclePostion = -1;
+    public static int checCusExist(String cusID) {
+        int cusPostion = -1;
         for (int i = 0; i < customers.size(); i++) {
-            if (customers.get(i).getCustomerID().equals(vehicleID)) {
-                vehiclePostion = i;
+            if (customers.get(i).getCustomerID().equals(cusID)) {
+                cusPostion = i;
             }
         }
-        return vehiclePostion;
+        return cusPostion;
     }
 
     // Part C - Section III - (2) - Adding new Customer - Add new Customer Name:
@@ -339,8 +350,15 @@ public class ManageHiring {
     // Part C - Section III - (2) - Adding new Customer - Add new Customer Phone:
     public static String addNewCusPhone() {
         System.out.println("Enter New Customer Phone: ");
-        String newCusName = keyboard.nextLine();
-        return newCusName;
+        String newCusPhone = keyboard.nextLine();
+        return newCusPhone;
+    }
+
+    // Part C - Section III - (2) - Adding new Corporate Customer - Add new Discount Rate:
+    public static float addNewDiscountRate() {
+        System.out.println("How many percent (%) for Corporate Customer Discount Rate? ");
+        float newDiscountRate= keyboard.nextFloat();
+        return newDiscountRate/100;
     }
 
     // Part C - Section III - (3) - Getting Floor and Ceiling for Searching by Daily Rate:
@@ -528,7 +546,7 @@ public class ManageHiring {
         Customer cusObjectInput;
         String[] cusArray = cusInput.trim().split("\\s*,\\s*");
 
-        if (Double.parseDouble(cusArray[cusArray.length-1]) < 1) {
+        if (Double.parseDouble(cusArray[cusArray.length-1]) < 1 && Double.parseDouble(cusArray[cusArray.length-1]) > 0) {
             cusObjectInput = new ICustomer(cusArray[0],cusArray[1], cusArray[2], Double.parseDouble(cusArray[3]));
         } else {
             cusObjectInput = new CCustomer(cusArray[0],cusArray[1], cusArray[2], Float.parseFloat(cusArray[3]));

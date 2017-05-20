@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da876ead-84aa-4678-bf16-7270eb2859ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer.txt" afterPath="$PROJECT_DIR$/customer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ICustomer.java" afterPath="$PROJECT_DIR$/src/com/company/ICustomer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ManageHiring.java" afterPath="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle.txt" afterPath="$PROJECT_DIR$/vehicle.txt" />
     </list>
@@ -25,8 +24,8 @@
       <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-565">
-              <caret line="269" column="43" lean-forward="true" selection-start-line="269" selection-start-column="43" selection-end-line="269" selection-end-column="43" />
+            <state relative-caret-position="405">
+              <caret line="552" column="9" lean-forward="true" selection-start-line="552" selection-start-column="9" selection-end-line="552" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
@@ -53,6 +52,7 @@
                 <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#hireVeh#0;class#ManageHiring#0" expanded="false" />
@@ -64,11 +64,23 @@
                 <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CCustomer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -540,31 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ICustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          <folding>
-            <element signature="method#ICustomer#0;class#ICustomer#0" expanded="false" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#578#579#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Manipulating.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -586,10 +573,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ICustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-565">
-          <caret line="269" column="43" lean-forward="true" selection-start-line="269" selection-start-column="43" selection-end-line="269" selection-end-column="43" />
+        <state relative-caret-position="405">
+          <caret line="552" column="9" lean-forward="true" selection-start-line="552" selection-start-column="9" selection-end-line="552" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
@@ -616,6 +622,7 @@
             <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#hireVeh#0;class#ManageHiring#0" expanded="false" />
@@ -627,7 +634,6 @@
             <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />

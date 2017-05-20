@@ -11,7 +11,7 @@ public class ICustomer extends Customer {
 
     public ICustomer(String customerID, String customerName, String customerPhone, double pastMileage) {
         super(customerID, customerName, customerPhone);
-        this.pastMileage = 1;
+        this.pastMileage = pastMileage;
     }
 
 

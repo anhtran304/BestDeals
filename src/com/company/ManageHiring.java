@@ -64,14 +64,19 @@ public class ManageHiring {
     }
     // Part C - Section III - Display Main Menu and Return Menu Choice
     public static int choiceMenu() {
+        int optionMenu = 0;
         printMenu();
-        int optionMenu = keyboard.nextInt();
-        keyboard.nextLine();
-        while (!(optionMenu > 0 && optionMenu < 9)) {
-            System.out.println("Your option is not exist! Back to Main Menu");
-            printMenu();
+        try {
             optionMenu = keyboard.nextInt();
             keyboard.nextLine();
+            while (!(optionMenu > 0 && optionMenu < 9)) {
+                System.out.println("Your option is not exist! Back to Main Menu");
+                printMenu();
+                optionMenu = keyboard.nextInt();
+                keyboard.nextLine();
+            }
+        } catch (Exception e) {
+            System.out.println("Your input is not correct. Exit program");
         }
         return optionMenu;
     }
@@ -654,7 +659,6 @@ public class ManageHiring {
                     bw.write(vehs.get(i).convertToString() + newLine);
                 }
             }
-            System.out.println("Done writing to vehicle.txt");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -686,7 +690,6 @@ public class ManageHiring {
             for (int i=0; i<customers.size(); i++) {
                 bw.write(customers.get(i).convertToString() + newLine);
             }
-            System.out.println("Done writing to customer.txt");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

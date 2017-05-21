@@ -462,17 +462,16 @@ public class ManageHiring {
     public static void hireCompleteVeh() throws StatusException, OdometerException {
         System.out.println("You are completing hiring vehicle");
         Vehicle veh = getVehicle();
-
         try {
-            if (!(veh.getStatus().equals("H"))) {
-                throw new StatusException("Vehicle is not being hired");
-            }
             double enterOdo = enterOdoReading();
             while (enterOdo <= veh.getOdometer()) {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());
                 enterOdo = enterOdoReading();
             }
-            System.out.println("Completed hiring vehicle and your charger is " + veh.hireComplete(enterOdo));
+            double charger = veh.hireComplete(enterOdo);
+            double discount = customers.get(checCusExist(veh.getHirer())).getDiscount(charger);
+            System.out.println("Completed hiring vehicle and your charger is: " + charger);
+            System.out.println("Your discount is: " + discount);
             veh.print();
         } catch (StatusException e) {
             System.out.println("Completing hiring vehicle could not be done! " + e);

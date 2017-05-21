@@ -251,7 +251,7 @@ public class ManageHiring {
         boolean returnBool = false;
         System.out.println("Is it Corporate Customer? (Y/N) ");
         String isCopCus = keyboard.nextLine();
-        switch (isCopCus) {
+        switch (isCopCus.toUpperCase()) {
             case "Y":
                 returnBool = true;
                 break;

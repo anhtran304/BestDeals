@@ -15,6 +15,10 @@ public class Vehicle {
     private double odometer;
     private Date dateHire;
 
+    public Vehicle() {
+        this("000000", "Default", 0, 0, "A");
+    }
+
     public Vehicle(String ID, String description, double dailyRate, double odometer) {
         this.ID = ID;
         this.description = description;

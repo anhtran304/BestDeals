@@ -29,14 +29,18 @@ public class ManageHiring {
 
         inputProjects();                 // Part C - Section III - Reading from files
 //        addVehicle();
-//        showMenu();                      // Part B - Section III - Show Menu
+        showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
+
+        for (int i=0; i<vehs.size(); i++) {
+            vehs.get(i).print();
+        }
     }
 
     // Part C - Section III - Show Menu:
     public static void showMenu() throws StatusException, OdometerException {
         int choice = choiceMenu();
-        while (choice > 0 && choice < 7) {
+        while (choice > 0 && choice < 9) {
             switch (choice) {
                 case 1:
                     addVehicle();
@@ -543,9 +547,8 @@ public class ManageHiring {
 
     // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
     public static Vehicle getVeh(String vehInput) {
-        Vehicle vehObjectInput;
+        Vehicle vehObjectInput = new Vehicle();
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
-
         if (vehArray.length == 6) {
             if (vehArray[4].equals("H")) {
                 vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
@@ -559,9 +562,9 @@ public class ManageHiring {
                 {
                     System.out.println("Exception "+ex);
                 }
-            } else if (vehArray.length == 5) {
-                vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
             }
+        } else if (vehArray.length == 5) {
+            vehObjectInput = new Vehicle(vehArray[0], vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
         } else if (vehArray.length == 9) {
             if (vehArray[4].equals("H")) {
                 vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]), Double.parseDouble(vehArray[8]));
@@ -575,9 +578,9 @@ public class ManageHiring {
                 {
                     System.out.println("Exception "+ex);
                 }
-            } else if (vehArray.length == 8) {
-                vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]));
             }
+        }  else if (vehArray.length == 8) {
+            vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]));
         }
         return vehObjectInput;
     }
@@ -615,7 +618,9 @@ public class ManageHiring {
             bw = new BufferedWriter(fw);
             String newLine = System.getProperty("line.separator");
             for (int i=0; i<vehs.size(); i++) {
-                bw.write(vehs.get(i).convertToString() + newLine);
+                if (!vehs.get(i).getID().equals("000000")) {
+                    bw.write(vehs.get(i).convertToString() + newLine);
+                }
             }
             System.out.println("Done writing to vehicle.txt");
         } catch (IOException e) {

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da876ead-84aa-4678-bf16-7270eb2859ac" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/CCustomer.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/CCustomer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/Customer.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/Customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/CCustomer.java" afterPath="$PROJECT_DIR$/src/com/company/CCustomer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Customer.java" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ManageHiring.java" afterPath="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle.txt" afterPath="$PROJECT_DIR$/vehicle.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="253" column="38" lean-forward="false" selection-start-line="253" selection-start-column="38" selection-end-line="253" selection-end-column="38" />
+            <state relative-caret-position="139">
+              <caret line="413" column="18" lean-forward="false" selection-start-line="413" selection-start-column="18" selection-end-line="413" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
@@ -41,64 +48,32 @@
                 <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-                <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-                <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="102" column="15" lean-forward="false" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="15" />
-              <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#service#0;class#Vehicle#0" expanded="false" />
-                <marker date="1495352542000" expanded="false" signature="4300:4311" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4321:4327" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4381:4387" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4423:4434" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4453:4459" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4490:4501" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4515:4521" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4555:4566" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4583:4589" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4622:4633" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4649:4655" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4686:4697" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4713:4719" ph=" }" />
-                <marker date="1495352542000" expanded="false" signature="4763:4774" ph=" { " />
-                <marker date="1495352542000" expanded="false" signature="4799:4805" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PremiumVehicle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="15" />
-              <folding>
-                <marker date="1495352555000" expanded="false" signature="2653:2664" ph=" { " />
-                <marker date="1495352555000" expanded="false" signature="2684:2690" ph=" }" />
-                <marker date="1495352555000" expanded="false" signature="2728:2739" ph=" { " />
-                <marker date="1495352555000" expanded="false" signature="2760:2766" ph=" }" />
-                <marker date="1495352555000" expanded="false" signature="2805:2816" ph=" { " />
-                <marker date="1495352555000" expanded="false" signature="2838:2844" ph=" }" />
+                <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+                <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,21 +82,11 @@
       <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+            <state relative-caret-position="442">
+              <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding>
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <marker date="1495354888000" expanded="false" signature="1472:1483" ph=" { " />
-                <marker date="1495354888000" expanded="false" signature="1501:1507" ph=" }" />
-                <marker date="1495354888000" expanded="false" signature="1544:1555" ph=" { " />
-                <marker date="1495354888000" expanded="false" signature="1575:1581" ph=" }" />
-                <marker date="1495354888000" expanded="false" signature="1619:1630" ph=" { " />
-                <marker date="1495354888000" expanded="false" signature="1651:1657" ph=" }" />
-                <marker date="1495354888000" expanded="true" signature="1693:1704" ph=" { " />
-                <marker date="1495354888000" expanded="true" signature="1723:1729" ph=" }" />
-                <marker date="1495354888000" expanded="true" signature="1780:1791" ph=" { " />
-                <marker date="1495354888000" expanded="true" signature="1840:1846" ph=" }" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,15 +95,13 @@
       <file leaf-file-name="CCustomer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="541">
+              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding>
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
-                <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-                <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-                <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="e#1210#1211#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1284#1285#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +110,8 @@
       <file leaf-file-name="vehicle.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vehicle.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,7 +127,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customer.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customer.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -193,9 +156,9 @@
         <option value="$PROJECT_DIR$/src/com/company/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/com/company/ICustomer.java" />
         <option value="$PROJECT_DIR$/src/com/company/PremiumVehicle.java" />
+        <option value="$PROJECT_DIR$/vehicle.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Customer.java" />
         <option value="$PROJECT_DIR$/src/com/company/CCustomer.java" />
-        <option value="$PROJECT_DIR$/vehicle.txt" />
         <option value="$PROJECT_DIR$/customer.txt" />
         <option value="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
       </list>
@@ -516,7 +479,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="808" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -527,7 +489,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38268158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37011173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -590,12 +552,10 @@
         <state relative-caret-position="210">
           <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,17 +583,32 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,17 +635,32 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -680,12 +670,10 @@
         <state relative-caret-position="210">
           <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -741,6 +729,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -748,6 +737,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -765,18 +755,8 @@
         <state relative-caret-position="435">
           <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <marker date="1495354888000" expanded="false" signature="1472:1483" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1501:1507" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1544:1555" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1575:1581" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1619:1630" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1651:1657" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1693:1704" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1723:1729" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1780:1791" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1840:1846" ph=" }" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,12 +774,10 @@
         <state relative-caret-position="375">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,6 +814,10 @@
             <element signature="e#378#379#0" expanded="true" />
             <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
             <element signature="method#service#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#hireComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#print#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#convertToString#0;class#Vehicle#0" expanded="false" />
             <marker date="1495352542000" expanded="false" signature="4300:4311" ph=" { " />
             <marker date="1495352542000" expanded="false" signature="4321:4327" ph=" }" />
             <marker date="1495352542000" expanded="false" signature="4381:4387" ph=" }" />
@@ -885,17 +867,32 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -956,6 +953,10 @@
             <element signature="e#378#379#0" expanded="true" />
             <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
             <element signature="method#service#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#hireComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#print#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#convertToString#0;class#Vehicle#0" expanded="false" />
             <marker date="1495352542000" expanded="false" signature="4300:4311" ph=" { " />
             <marker date="1495352542000" expanded="false" signature="4321:4327" ph=" }" />
             <marker date="1495352542000" expanded="false" signature="4381:4387" ph=" }" />
@@ -995,18 +996,8 @@
         <state relative-caret-position="231">
           <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <marker date="1495354888000" expanded="false" signature="1472:1483" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1501:1507" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1544:1555" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1575:1581" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1619:1630" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1651:1657" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1693:1704" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1723:1729" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1780:1791" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1840:1846" ph=" }" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1024,12 +1015,10 @@
         <state relative-caret-position="210">
           <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1057,17 +1046,32 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1094,17 +1098,32 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1114,12 +1133,10 @@
         <state relative-caret-position="210">
           <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1175,6 +1192,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,6 +1200,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,7 +1230,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/ICustomer.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
+        <state relative-caret-position="322">
           <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="15" />
           <folding>
             <marker date="1495352555000" expanded="false" signature="2653:2664" ph=" { " />
@@ -1224,59 +1243,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <marker date="1495354888000" expanded="true" signature="1208:1214" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1267:1278" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1311:1317" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        <state relative-caret-position="442">
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
           <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <marker date="1495354888000" expanded="false" signature="1472:1483" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1501:1507" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1544:1555" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1575:1581" ph=" }" />
-            <marker date="1495354888000" expanded="false" signature="1619:1630" ph=" { " />
-            <marker date="1495354888000" expanded="false" signature="1651:1657" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1693:1704" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1723:1729" ph=" }" />
-            <marker date="1495354888000" expanded="true" signature="1780:1791" ph=" { " />
-            <marker date="1495354888000" expanded="true" signature="1840:1846" ph=" }" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customer.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="541">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="336">
           <caret line="102" column="15" lean-forward="false" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="15" />
           <folding>
             <element signature="e#316#317#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
             <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
             <element signature="method#service#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#hireComplete#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#print#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#convertToString#0;class#Vehicle#0" expanded="false" />
             <marker date="1495352542000" expanded="false" signature="4300:4311" ph=" { " />
             <marker date="1495352542000" expanded="false" signature="4321:4327" ph=" }" />
             <marker date="1495352542000" expanded="false" signature="4381:4387" ph=" }" />
@@ -1296,10 +1299,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="253" column="38" lean-forward="false" selection-start-line="253" selection-start-column="38" selection-end-line="253" selection-end-column="38" />
+        <state relative-caret-position="139">
+          <caret line="413" column="18" lean-forward="false" selection-start-line="413" selection-start-column="18" selection-end-line="413" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
@@ -1318,25 +1329,40 @@
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495354943000" expanded="false" signature="16808:16943" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="17078:18196" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18309:18595" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="18736:19430" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19551:19702" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="19836:20532" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="20685:22811" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="22965:23469" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23578:23633" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="23746:24723" ph="{...}" />
-            <marker date="1495354943000" expanded="false" signature="24837:25744" ph="{...}" />
+            <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checCusExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getFilterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#filterDailyRate#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVehicle#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterVehicleID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#checkVehicleExist#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterHirerID#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#hireCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#getCus#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle.txt">
+    <entry file="file://$PROJECT_DIR$/customer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>

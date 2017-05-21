@@ -47,6 +47,10 @@ public class Customer {
         return discountAmout;
     }
 
+    public boolean isCor() {
+        return false;
+    }
+
     public String getCustomerID() {
         return customerID;
     }

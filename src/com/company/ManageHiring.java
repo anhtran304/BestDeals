@@ -23,10 +23,10 @@ public class ManageHiring {
     public static int countCus = 0;
     public static int countAddNewCus = 0;
 
-    public static void main(String[] args) throws StatusException, OdometerException, IOException, ParseException {
+    public static void main(String[] args) throws Exception {
 
         inputProjects();                 // Part C - Section III - Reading from files
-//        addVehicle();
+
         showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
 
@@ -36,7 +36,7 @@ public class ManageHiring {
     }
 
     // Part C - Section III - Show Menu:
-    public static void showMenu() throws StatusException, OdometerException {
+    public static void showMenu() throws Exception {
         int choice = choiceMenu();
         while (choice > 0 && choice < 9) {
             switch (choice) {
@@ -397,7 +397,7 @@ public class ManageHiring {
     }
 
     // Part C - Section III - (4) - Hire Vehicle
-    public static void hireVeh() throws StatusException, OdometerException {
+    public static void hireVeh() throws Exception {
         System.out.println("You are hiring vehicle");
         Vehicle veh = getVehicle();
         try {
@@ -406,8 +406,15 @@ public class ManageHiring {
             }
             String hirerID = enterHirerID();
             if (checCusExist(hirerID) != -1) {
-                veh.hire(hirerID);
-                veh.print();
+                if (isCorporate(hirerID)) {
+                    veh.hire(hirerID);
+                    veh.print();
+                } else if (isHiring(hirerID)) {
+                    throw new StatusException("Individual Customer is only allowed hiring 1 vehicle at one time");
+                } else if (!isHiring(hirerID)) {
+                    veh.hire(hirerID);
+                    veh.print();
+                }
             } else if (checCusExist(hirerID) == -1){
                 System.out.println("Customer ID is not exist");
                 // Do you want to add newCus (Y/N)?
@@ -419,7 +426,32 @@ public class ManageHiring {
             System.out.println("Vehicle could not be hired! " + e);
         } catch (OdometerException e) {
             System.out.println(e);
+        } catch (Exception e) {
+            System.out.println(e);
         }
+    }
+
+    // Part C - Section III - (4) - Hire Vehicle - Check Customer is Corporate of not?
+    public static boolean isCorporate(String hirerID) {
+        for (int i=0; i<customers.size(); i++) {
+            if (customers.get(i).getCustomerID().equals(hirerID) && customers.get(i).isCor()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Part C - Section III - (4) - Hire Vehicle - Check Customer is Hiring of not?
+    public static boolean isHiring(String hirerID) throws Exception {
+        try {
+            for (int i = 0; i < vehs.size(); i++) {
+                if (vehs.get(i).getHirer().equals(hirerID)) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+        }
+        return false;
     }
 
     // Part C - Section III - (4) - Hire Vehicle - Return Vehicle if correctly Entering Vehicle ID:

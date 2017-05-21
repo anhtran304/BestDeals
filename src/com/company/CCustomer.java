@@ -36,6 +36,11 @@ public class CCustomer extends Customer{
         return discountAmount;
     }
 
+    @Override
+    public boolean isCor() {
+        return true;
+    }
+
     public double getDiscountRate() {
         return discountRate;
     }

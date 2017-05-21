@@ -34,5 +34,4 @@ public class CCustomer extends Customer{
     public void setDiscountRate(float discountRate) {
         this.discountRate = discountRate;
     }
-
 }

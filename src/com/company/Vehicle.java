@@ -16,7 +16,7 @@ public class Vehicle {
     private Date dateHire;
 
     public Vehicle() {
-        this("000000", "Default", 0, 0, "A");
+        this("000000", "Default", 0, 0, "A", "C00000");
     }
 
     public Vehicle(String ID, String description, double dailyRate, double odometer) {
@@ -30,9 +30,18 @@ public class Vehicle {
     public Vehicle(String ID, String description, double dailyRate, double odometer, String status) {
         this.ID = ID;
         this.description = description;
+        this.dailyRate = dailyRate;
+        this.odometer = odometer;
+        this.status = status;
+    }
+
+    public Vehicle(String ID, String description, double dailyRate, double odometer, String status, String hirer) {
+        this.ID = ID;
+        this.description = description;
         this.status = status;
         this.dailyRate = dailyRate;
         this.odometer = odometer;
+        this.hirer = hirer;
     }
 
 
@@ -94,7 +103,7 @@ public class Vehicle {
     public void print() {
         System.out.println("**********    VEHICLE DETAILS    **********");
         System.out.println(DateTime.getCurrentTime());
-        System.out.println("Vehicle ID: " + this.ID + "   " + "Description: " + this.description + "   " + "Status: " + this.status + "   " + "Daily Rate: " + this.dailyRate + "   " + "Odometer Reading: " + this.odometer);
+        System.out.println("Vehicle ID: " + this.ID + "   " + "Description: " + this.description + "   " + "Daily Rate: " + this.dailyRate + "   " + "Odometer Reading: " + this.odometer + "   " + "Status: " + this.status);
         if (status == "H") {
             System.out.println("Hirer: " + this.hirer + "   " + "Date/Time of hire: " + this.dateHire);
         }
@@ -104,7 +113,7 @@ public class Vehicle {
         String convertOutput;
         convertOutput = this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer() + ", " + this.getStatus();
         if (this.status.equals("H")) {
-            convertOutput += ", " + this.dateHire.toString();
+            convertOutput += ", " + this.hirer.toString() + ", " + this.dateHire.toString();
         }
         return convertOutput;
     }

@@ -10,18 +10,28 @@ public class PremiumVehicle extends Vehicle {
     private double serviceLength;
     private double odoLastService;
 
-    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, double dailyMileage, double serviceLength, double odoLastService) {
-        super(ID, description, dailyRate, odometer);
+
+    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, String status, String hirer, double dailyMileage, double serviceLength, double odoLastService) {
+        super(ID, description, dailyRate, odometer, status, hirer);
         this.dailyMileage = dailyMileage;
         this.serviceLength = serviceLength;
         this.odoLastService = odoLastService;
     }
 
-    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, String status, double dailyMileage, double serviceLength, double odoLastService) {
+    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, double dailyMileage, double serviceLength, double odoLastService) {
+        super(ID, description, dailyRate, odometer);
+        this.dailyMileage = dailyMileage;
+        this.serviceLength = serviceLength;
+        this.odoLastService = odoLastService;
+
+    }
+
+    public PremiumVehicle(String ID, String description, double dailyRate, double odometer,String status, double dailyMileage, double serviceLength, double odoLastService) {
         super(ID, description, dailyRate, odometer, status);
         this.dailyMileage = dailyMileage;
         this.serviceLength = serviceLength;
         this.odoLastService = odoLastService;
+
     }
 
     @Override

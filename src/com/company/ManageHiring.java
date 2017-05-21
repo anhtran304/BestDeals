@@ -1,6 +1,4 @@
 package com.company;
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 import java.io.*;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -127,7 +125,7 @@ public class ManageHiring {
         boolean returnBool = false;
         System.out.println("Is it Premium Vehicle? (Y/N) ");
         String isPremium = keyboard.nextLine();
-        switch (isPremium) {
+        switch (isPremium.toUpperCase()) {
             case "Y":
                 returnBool = true;
                 break;
@@ -145,9 +143,8 @@ public class ManageHiring {
         String newDes = addNewDes();
         double newDailyRate = addNewDailyRate();
         double newOdo = addNewOdo();
-        String status = "A";
 
-        Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo, status);
+        Vehicle newVeh = new Vehicle(newVehID, newDes, newDailyRate, newOdo);
         vehs.add((countVeh + countAddNewVeh), newVeh);
         countAddNewVeh++;
     }
@@ -162,9 +159,8 @@ public class ManageHiring {
         int newDailyMileage = addDailyMileage();
         int newServiceLength = addServiceLength();
         int newOdoLastService = addOdoLastService();
-        String status = "A";
 
-        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, status, newDailyMileage, newServiceLength, newOdoLastService);
+        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService);
         vehs.add((countVeh + countAddNewVeh), newVeh);
         countAddNewVeh++;
     }
@@ -422,6 +418,8 @@ public class ManageHiring {
 
         } catch (StatusException e) {
             System.out.println("Vehicle could not be hired! " + e);
+        } catch (OdometerException e) {
+            System.out.println(e);
         }
     }
 
@@ -549,13 +547,13 @@ public class ManageHiring {
     public static Vehicle getVeh(String vehInput) {
         Vehicle vehObjectInput = new Vehicle();
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
-        if (vehArray.length == 6) {
+        if (vehArray.length == 7) {
             if (vehArray[4].equals("H")) {
-                vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
+                vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], vehArray[5]);
                 SimpleDateFormat formatDateHirer = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
                 try
                 {
-                    Date dateHirer = formatDateHirer.parse(vehArray[5]);
+                    Date dateHirer = formatDateHirer.parse(vehArray[6]);
                     vehObjectInput.setDateHire(dateHirer);
                 }
                 catch (ParseException ex)
@@ -565,13 +563,13 @@ public class ManageHiring {
             }
         } else if (vehArray.length == 5) {
             vehObjectInput = new Vehicle(vehArray[0], vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
-        } else if (vehArray.length == 9) {
+        } else if (vehArray.length == 10) {
             if (vehArray[4].equals("H")) {
-                vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]), Double.parseDouble(vehArray[8]));
+                vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], vehArray[5], Double.parseDouble(vehArray[7]), Double.parseDouble(vehArray[8]), Double.parseDouble(vehArray[9]));
                 SimpleDateFormat formatDateHirer = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
                 try
                 {
-                    Date dateHirer = formatDateHirer.parse(vehArray[5]);
+                    Date dateHirer = formatDateHirer.parse(vehArray[6]);
                     vehObjectInput.setDateHire(dateHirer);
                 }
                 catch (ParseException ex)

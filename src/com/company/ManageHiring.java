@@ -462,6 +462,9 @@ public class ManageHiring {
         System.out.println("You are completing hiring vehicle");
         Vehicle veh = getVehicle();
         try {
+            if (!veh.getStatus().equals("H")) {
+                throw new StatusException("Vehicle is not being hired");
+            }
             double enterOdo = enterOdoReading();
             while (enterOdo <= veh.getOdometer()) {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());
@@ -498,6 +501,9 @@ public class ManageHiring {
         System.out.println("You are completing servicing vehicle");
 
         try {
+            if (!veh.getStatus().equals("S")) {
+                throw new StatusException("Vehicle is not being serviced");
+            }
             double enterOdo = enterOdoReading();
             while (enterOdo < veh.getOdometer()) {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());

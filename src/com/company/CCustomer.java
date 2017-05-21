@@ -8,26 +8,35 @@ package com.company;
 // DiscountRate input by percent, E.g: 10 -> 10%;
 
 public class CCustomer extends Customer{
-    private float discountRate;
+    private double discountRate;
 
-    public CCustomer(String customerID, String customerName, String customerPhone, float discountRate) {
+    public CCustomer(String customerID, String customerName, String customerPhone, double discountRate) {
         super(customerID, customerName, customerPhone);
+        this.discountRate = discountRate;
+    }
+
+    public CCustomer(String customerID, String customerName, String customerPhone, double pastMileage, double discountRate) {
+        super(customerID, customerName, customerPhone, pastMileage);
         this.discountRate = discountRate;
     }
 
     @Override
     public String convertToString() {
-        return super.convertToString() + this.discountRate;
+        return super.convertToString() + ", " + this.discountRate;
     }
 
     @Override
     public double getDiscount(double amount) {
-        double copDiscountAmount;
-        copDiscountAmount = amount * this.discountRate;
-        return copDiscountAmount;
+        double discountAmount;
+        if (this.discountRate != 0) {
+            discountAmount = amount * this.discountRate;
+        } else {
+            discountAmount = super.getDiscount(amount);
+        }
+        return discountAmount;
     }
 
-    public float getDiscountRate() {
+    public double getDiscountRate() {
         return discountRate;
     }
 

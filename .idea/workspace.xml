@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da876ead-84aa-4678-bf16-7270eb2859ac" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ICustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/ICustomer.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/CCustomer.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/CCustomer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/Customer.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/Customer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer.txt" afterPath="$PROJECT_DIR$/customer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/CCustomer.java" afterPath="$PROJECT_DIR$/src/com/company/CCustomer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Customer.java" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ManageHiring.java" afterPath="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/PremiumVehicle.java" afterPath="$PROJECT_DIR$/src/com/company/PremiumVehicle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle.txt" afterPath="$PROJECT_DIR$/vehicle.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,12 +32,10 @@
       <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="469" column="13" lean-forward="true" selection-start-line="469" selection-start-column="13" selection-end-line="469" selection-end-column="13" />
+            <state relative-caret-position="515">
+              <caret line="595" column="29" lean-forward="false" selection-start-line="595" selection-start-column="29" selection-end-line="595" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -45,13 +51,9 @@
                 <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -66,11 +68,9 @@
                 <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-                <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
                 <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-                <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-                <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+                <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,28 +79,13 @@
       <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="98" column="9" lean-forward="false" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="-259">
+              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
               <folding>
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
                 <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
                 <element signature="method#service#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
-                <element signature="e#4301#4302#0" expanded="true" />
-                <element signature="e#4326#4327#0" expanded="true" />
-                <element signature="e#4358#4359#0" expanded="true" />
-                <element signature="e#4386#4387#0" expanded="true" />
-                <element signature="e#4424#4425#0" expanded="true" />
-                <element signature="e#4458#4459#0" expanded="true" />
-                <element signature="e#4491#4492#0" expanded="true" />
-                <element signature="e#4520#4521#0" expanded="true" />
-                <element signature="e#4556#4557#0" expanded="true" />
-                <element signature="e#4588#4589#0" expanded="true" />
-                <element signature="e#4623#4624#0" expanded="true" />
-                <element signature="e#4654#4655#0" expanded="true" />
-                <element signature="e#4687#4688#0" expanded="true" />
-                <element signature="e#4718#4719#0" expanded="true" />
-                <element signature="e#4764#4765#0" expanded="true" />
-                <element signature="e#4804#4805#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,9 +94,41 @@
       <file leaf-file-name="PremiumVehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-128">
-              <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="-474">
+              <caret line="28" column="92" lean-forward="false" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#1694#1695#0" expanded="true" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#1781#1782#0" expanded="true" />
+                <element signature="e#1845#1846#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CCustomer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="17" column="125" lean-forward="false" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+              <folding>
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,8 +136,18 @@
       <file leaf-file-name="vehicle.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vehicle.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateTime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/DateTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,8 +156,8 @@
       <file leaf-file-name="customer.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customer.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+            <state relative-caret-position="15">
+              <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -150,16 +177,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/company/UsingVehicle.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ICustomer.java" />
         <option value="$PROJECT_DIR$/src/com/company/PremiumTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Customer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/CCustomer.java" />
-        <option value="$PROJECT_DIR$/customer.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Manipulating.java" />
         <option value="$PROJECT_DIR$/src/com/company/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ICustomer.java" />
         <option value="$PROJECT_DIR$/src/com/company/PremiumVehicle.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
         <option value="$PROJECT_DIR$/vehicle.txt" />
+        <option value="$PROJECT_DIR$/customer.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Customer.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CCustomer.java" />
       </list>
     </option>
   </component>
@@ -483,19 +510,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4706704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35335195" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6243017" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4622905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19313304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -532,36 +559,6 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47148675" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40325865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15105577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -577,14 +574,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Manipulating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="151" column="83" lean-forward="false" selection-start-line="151" selection-start-column="83" selection-end-line="151" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -607,8 +596,6 @@
           <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -624,13 +611,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -645,11 +628,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,8 +641,6 @@
           <caret line="552" column="9" lean-forward="true" selection-start-line="552" selection-start-column="9" selection-end-line="552" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -677,13 +656,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -698,11 +673,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,7 +772,7 @@
         <state relative-caret-position="435">
           <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
-            <element signature="method#Customer#0;class#Customer#0" expanded="false" />
+            <element signature="method#Customer#2;class#Customer#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,8 +851,6 @@
           <caret line="470" column="56" lean-forward="true" selection-start-line="470" selection-start-column="56" selection-end-line="470" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -895,13 +866,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -916,11 +883,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,6 +977,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,8 +1018,6 @@
           <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -1062,13 +1033,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -1083,11 +1050,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1098,8 +1063,6 @@
           <caret line="552" column="9" lean-forward="true" selection-start-line="552" selection-start-column="9" selection-end-line="552" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -1115,13 +1078,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -1136,11 +1095,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1216,36 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ICustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Manipulating.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1254,66 +1181,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ICustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="125" lean-forward="false" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+          <folding>
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="-474">
+          <caret line="28" column="92" lean-forward="false" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="98" column="9" lean-forward="false" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        <state relative-caret-position="-259">
+          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
           <folding>
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
             <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
             <element signature="method#service#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
-            <element signature="e#4301#4302#0" expanded="true" />
-            <element signature="e#4326#4327#0" expanded="true" />
-            <element signature="e#4358#4359#0" expanded="true" />
-            <element signature="e#4386#4387#0" expanded="true" />
-            <element signature="e#4424#4425#0" expanded="true" />
-            <element signature="e#4458#4459#0" expanded="true" />
-            <element signature="e#4491#4492#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-            <element signature="e#4556#4557#0" expanded="true" />
-            <element signature="e#4588#4589#0" expanded="true" />
-            <element signature="e#4623#4624#0" expanded="true" />
-            <element signature="e#4654#4655#0" expanded="true" />
-            <element signature="e#4687#4688#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4764#4765#0" expanded="true" />
-            <element signature="e#4804#4805#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="469" column="13" lean-forward="true" selection-start-line="469" selection-start-column="13" selection-end-line="469" selection-end-column="13" />
+        <state relative-caret-position="515">
+          <caret line="595" column="29" lean-forward="false" selection-start-line="595" selection-start-column="29" selection-end-line="595" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#showMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#choiceMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#printMenu#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#anymoreTrans#0;class#ManageHiring#0" expanded="false" />
@@ -1329,13 +1291,9 @@
             <element signature="method#addServiceLength#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addOdoLastService#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#vehIsValidation#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCustomer#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#isCopCustomer#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addIndCus#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#addCopCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusID#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterCusID#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#cusIsValidation#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusName#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewCusPhone#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#addNewDiscountRate#0;class#ManageHiring#0" expanded="false" />
@@ -1350,11 +1308,9 @@
             <element signature="method#serviceCompleteVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#enterOdoReading#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#inputProjects#0;class#ManageHiring#0" expanded="false" />
-            <element signature="method#getVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#outputProjects#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
-            <marker date="1495343288000" expanded="false" signature="22588:23101" ph="{...}" />
-            <marker date="1495343288000" expanded="false" signature="24469:25376" ph="{...}" />
+            <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
           </folding>
         </state>
       </provider>

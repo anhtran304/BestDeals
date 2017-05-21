@@ -268,9 +268,8 @@ public class ManageHiring {
         String newID = addNewCusID();
         String newName = addNewCusName();
         String newPhone = addNewCusPhone();
-        double newPastMilage = 0;
 
-        ICustomer newICus = new ICustomer(newID, newName, newPhone, newPastMilage);
+        Customer newICus = new Customer(newID, newName, newPhone);
         customers.add((countCus + countAddNewCus), newICus);
         countAddNewCus++;
         return newID;
@@ -472,6 +471,9 @@ public class ManageHiring {
             double discount = customers.get(checCusExist(veh.getHirer())).getDiscount(charger);
             System.out.println("Completed hiring vehicle and your charger is: " + charger);
             System.out.println("Your discount is: " + discount);
+            System.out.println("Past mileage before " + customers.get(checCusExist(veh.getHirer())).getPastMileage());
+            customers.get(checCusExist(veh.getHirer())).setPastMileage(enterOdo - veh.getOdometer());
+            System.out.println("Past mileage after " + customers.get(checCusExist(veh.getHirer())).getPastMileage());
             veh.print();
         } catch (StatusException e) {
             System.out.println("Completing hiring vehicle could not be done! " + e);
@@ -498,7 +500,7 @@ public class ManageHiring {
 
         try {
             double enterOdo = enterOdoReading();
-            while (enterOdo <= veh.getOdometer()) {
+            while (enterOdo < veh.getOdometer()) {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());
                 enterOdo = enterOdoReading();
             }
@@ -584,13 +586,14 @@ public class ManageHiring {
 
     // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
     public static Customer getCus(String cusInput) {
-        Customer cusObjectInput;
+        Customer cusObjectInput = new Customer();
         String[] cusArray = cusInput.trim().split("\\s*,\\s*");
 
-        if (Double.parseDouble(cusArray[cusArray.length-1]) < 1 && Double.parseDouble(cusArray[cusArray.length-1]) > 0) {
-            cusObjectInput = new ICustomer(cusArray[0],cusArray[1], cusArray[2], Double.parseDouble(cusArray[3]));
-        } else {
-            cusObjectInput = new CCustomer(cusArray[0],cusArray[1], cusArray[2], Float.parseFloat(cusArray[3]));
+        if (cusArray.length == 4) {
+            cusObjectInput = new Customer(cusArray[0],cusArray[1], cusArray[2], Double.parseDouble(cusArray[3]));
+
+        } else if (cusArray.length == 5) {
+            cusObjectInput = new CCustomer(cusArray[0],cusArray[1], cusArray[2],Double.parseDouble(cusArray[3]), Double.parseDouble(cusArray[4]));
         }
         return cusObjectInput;
     }

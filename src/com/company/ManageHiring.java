@@ -467,13 +467,12 @@ public class ManageHiring {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());
                 enterOdo = enterOdoReading();
             }
+            double diffOdo = enterOdo - veh.getOdometer();
             double charger = veh.hireComplete(enterOdo);
             double discount = customers.get(checCusExist(veh.getHirer())).getDiscount(charger);
             System.out.println("Completed hiring vehicle and your charger is: " + charger);
             System.out.println("Your discount is: " + discount);
-            System.out.println("Past mileage before " + customers.get(checCusExist(veh.getHirer())).getPastMileage());
-            customers.get(checCusExist(veh.getHirer())).setPastMileage(enterOdo - veh.getOdometer());
-            System.out.println("Past mileage after " + customers.get(checCusExist(veh.getHirer())).getPastMileage());
+            customers.get(checCusExist(veh.getHirer())).setPastMileage((diffOdo));
             veh.print();
         } catch (StatusException e) {
             System.out.println("Completing hiring vehicle could not be done! " + e);

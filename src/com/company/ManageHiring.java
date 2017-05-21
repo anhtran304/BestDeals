@@ -26,13 +26,8 @@ public class ManageHiring {
     public static void main(String[] args) throws Exception {
 
         inputProjects();                 // Part C - Section III - Reading from files
-
         showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
-
-        for (int i=0; i<vehs.size(); i++) {
-            vehs.get(i).print();
-        }
     }
 
     // Part C - Section III - Show Menu:

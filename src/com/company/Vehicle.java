@@ -15,10 +15,6 @@ public class Vehicle {
     private double odometer;
     private Date dateHire;
 
-    public Vehicle() {
-        this("000000", "Default", 0, 0, "A");
-    }
-
     public Vehicle(String ID, String description, double dailyRate, double odometer) {
         this.ID = ID;
         this.description = description;
@@ -103,6 +99,9 @@ public class Vehicle {
     public String convertToString() {
         String convertOutput;
         convertOutput = this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer() + ", " + this.getStatus();
+        if (this.status.equals("H")) {
+            convertOutput += ", " + this.dateHire.toString();
+        }
         return convertOutput;
     }
 
@@ -132,5 +131,9 @@ public class Vehicle {
 
     public Date getDateHire() {
         return dateHire;
+    }
+
+    public void setDateHire(Date dateHire) {
+        this.dateHire = dateHire;
     }
 }

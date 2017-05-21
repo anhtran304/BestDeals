@@ -12,10 +12,6 @@ public class Customer {
     private String customerName;
     private String customerPhone;
 
-    public Customer() {
-        this("C000000", "Default Name", "0449159695");
-    }
-
     public Customer(String customerID, String customerName, String customerPhone) {
         this.customerID = customerID;
         this.customerName = customerName;

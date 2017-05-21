@@ -1,8 +1,13 @@
 package com.company;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 import java.io.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 
 /**
@@ -20,10 +25,11 @@ public class ManageHiring {
     public static int countCus = 0;
     public static int countAddNewCus = 0;
 
-    public static void main(String[] args) throws StatusException, OdometerException, IOException {
+    public static void main(String[] args) throws StatusException, OdometerException, IOException, ParseException {
+
         inputProjects();                 // Part C - Section III - Reading from files
 //        addVehicle();
-        showMenu();                      // Part B - Section III - Show Menu
+//        showMenu();                      // Part B - Section III - Show Menu
         outputProjects();                // Part C - Section III - Writing to files
     }
 
@@ -154,7 +160,7 @@ public class ManageHiring {
         int newOdoLastService = addOdoLastService();
         String status = "A";
 
-        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, newDailyMileage, newServiceLength, newOdoLastService, status);
+        PremiumVehicle newVeh = new PremiumVehicle(newVehID, newDes, newDailyRate, newOdo, status, newDailyMileage, newServiceLength, newOdoLastService);
         vehs.add((countVeh + countAddNewVeh), newVeh);
         countAddNewVeh++;
     }
@@ -533,20 +539,45 @@ public class ManageHiring {
             }
             sc.close();
         }
-        for (int i = 0; i<vehs.size(); i++) {
-            vehs.get(i).print();
-        }
     }
 
     // Part C - Section III - Reading from files - Get Input Vehicle Object from Reading Vehicle.txt
     public static Vehicle getVeh(String vehInput) {
-        Vehicle vehObjectInput = new Vehicle();
+        Vehicle vehObjectInput;
         String[] vehArray = vehInput.trim().split("\\s*,\\s*");
 
-        if (vehArray.length == 5) {
-            vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
-        } else if (vehArray.length == 8) {
-            vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), Double.parseDouble(vehArray[4]), Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]), vehArray[7]);
+        if (vehArray.length == 6) {
+            if (vehArray[4].equals("H")) {
+                vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
+                SimpleDateFormat formatDateHirer = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
+                try
+                {
+                    Date dateHirer = formatDateHirer.parse(vehArray[5]);
+                    vehObjectInput.setDateHire(dateHirer);
+                }
+                catch (ParseException ex)
+                {
+                    System.out.println("Exception "+ex);
+                }
+            } else if (vehArray.length == 5) {
+                vehObjectInput = new Vehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4]);
+            }
+        } else if (vehArray.length == 9) {
+            if (vehArray[4].equals("H")) {
+                vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]), Double.parseDouble(vehArray[8]));
+                SimpleDateFormat formatDateHirer = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
+                try
+                {
+                    Date dateHirer = formatDateHirer.parse(vehArray[5]);
+                    vehObjectInput.setDateHire(dateHirer);
+                }
+                catch (ParseException ex)
+                {
+                    System.out.println("Exception "+ex);
+                }
+            } else if (vehArray.length == 8) {
+                vehObjectInput = new PremiumVehicle(vehArray[0],vehArray[1], Double.parseDouble(vehArray[2]), Double.parseDouble(vehArray[3]), vehArray[4], Double.parseDouble(vehArray[5]), Double.parseDouble(vehArray[6]), Double.parseDouble(vehArray[7]));
+            }
         }
         return vehObjectInput;
     }

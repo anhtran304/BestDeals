@@ -17,7 +17,7 @@ public class PremiumVehicle extends Vehicle {
         this.odoLastService = odoLastService;
     }
 
-    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, double dailyMileage, double serviceLength, double odoLastService, String status) {
+    public PremiumVehicle(String ID, String description, double dailyRate, double odometer, String status, double dailyMileage, double serviceLength, double odoLastService) {
         super(ID, description, dailyRate, odometer, status);
         this.dailyMileage = dailyMileage;
         this.serviceLength = serviceLength;

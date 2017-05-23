@@ -64,20 +64,14 @@ public class ManageHiring {
     }
     // Part C - Section III - Display Main Menu and Return Menu Choice
     public static int choiceMenu() {
-        int optionMenu = 0;
         printMenu();
-        try {
-            optionMenu = keyboard.nextInt();
-            keyboard.nextLine();
-            while (!(optionMenu > 0 && optionMenu < 9)) {
+        int optionMenu;
+        optionMenu = getMenu();
+        while (!(optionMenu > 0 && optionMenu < 9)) {
                 System.out.println("Your option is not exist! Back to Main Menu");
                 printMenu();
-                optionMenu = keyboard.nextInt();
-                keyboard.nextLine();
+                optionMenu = getMenu();
             }
-        } catch (Exception e) {
-            System.out.println("Your input is not correct. Exit program");
-        }
         return optionMenu;
     }
 
@@ -93,6 +87,17 @@ public class ManageHiring {
         System.out.println("Complete Service           7");
         System.out.println("Exit                       8");
         System.out.println("        Your Choice:        ");
+    }
+    public static int getMenu(){
+        int returMenu = 0;
+        try {
+            char anymoreTrans = Character.toUpperCase(keyboard.next().charAt(0));
+            returMenu = Character.getNumericValue(anymoreTrans);
+        } catch (Exception e) {
+            System.out.println("Your input is not correct");
+        } finally {
+            return returMenu;
+        }
     }
 
     // Part C - Section III - Print Menu - Anymore transactions?

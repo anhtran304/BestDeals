@@ -28,11 +28,7 @@ public class CCustomer extends Customer{
     @Override
     public double getDiscount(double amount) {
         double discountAmount;
-        if (this.discountRate != 0) {
-            discountAmount = amount * this.discountRate;
-        } else {
-            discountAmount = super.getDiscount(amount);
-        }
+        discountAmount = amount * this.discountRate;
         return discountAmount;
     }
 

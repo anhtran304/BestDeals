@@ -89,28 +89,36 @@ public class ManageHiring {
         System.out.println("        Your Choice:        ");
     }
     public static int getMenu(){
-        int returMenu = 0;
+        int returnMenu = 0;
         try {
             char anymoreTrans = Character.toUpperCase(keyboard.next().charAt(0));
-            returMenu = Character.getNumericValue(anymoreTrans);
+            keyboard.nextLine();
+            returnMenu = Character.getNumericValue(anymoreTrans);
         } catch (Exception e) {
             System.out.println("Your input is not correct");
         } finally {
-            return returMenu;
+            return returnMenu;
         }
     }
 
     // Part C - Section III - Print Menu - Anymore transactions?
     public static int anymoreTrans() {
         int anymoreChoice = 0;
-        System.out.println("Any more transactions? (Y/N): ");
-        char anymoreTrans = Character.toUpperCase(keyboard.next(".").charAt(0));
-        switch (anymoreTrans) {
-            case 'Y':
-                anymoreChoice = choiceMenu();
-                break;
-            case 'N':
-                break;
+        int anymoreTrans = 0;
+        while (anymoreTrans == 0) {
+            try {
+                System.out.println("Any more transactions? (Y/N): ");
+                char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                if (yesNoChar == 'Y') {
+                    anymoreChoice = choiceMenu();
+                } else if (yesNoChar == 'N') {
+                    break;
+                } else {
+                    anymoreTrans = 0;
+                }
+            } catch (Exception e) {
+                System.out.println("Your input is not exist!");
+            }
         }
         return anymoreChoice;
     }
@@ -534,8 +542,8 @@ public class ManageHiring {
 
     // Part C - Section III - (7) - Complete Service
     public static void serviceCompleteVeh() throws StatusException, OdometerException {
-        Vehicle veh = getVehicle();
         System.out.println("You are completing servicing vehicle");
+        Vehicle veh = getVehicle();
 
         try {
             if (!veh.getStatus().equals("S")) {

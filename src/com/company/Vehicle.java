@@ -79,7 +79,7 @@ public class Vehicle {
         } else if (odo < this.odometer) {
             throw new OdometerException("Odometer reading has to be more than " + this.odometer);
         }
-        else if (odo > this.odometer) {
+        else if (odo >= this.odometer) {
             this.odometer = odo;
             this.status = "A";
             }

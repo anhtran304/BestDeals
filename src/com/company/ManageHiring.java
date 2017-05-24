@@ -424,7 +424,7 @@ public class ManageHiring {
     public static void filterDailyRate(double floorRate, double ceilingRate) {
         int count = 0;
         System.out.println("List the vehicles with Daily Rate between " + floorRate + " and " + ceilingRate + ": ");
-        for (int i=0; i< vehs.size(); i++) {
+        for (int i=0; i<vehs.size(); i++) {
             if (floorRate <= vehs.get(i).getDailyRate() && vehs.get(i).getDailyRate() <= ceilingRate) {
                 System.out.println("ID: " + vehs.get(i).getID() + "  -  " + "Description: " + vehs.get(i).getDescription() + "  -  " + "Daily rate: " + vehs.get(i).getDailyRate());
                 count++;

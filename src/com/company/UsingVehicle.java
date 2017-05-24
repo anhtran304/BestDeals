@@ -16,8 +16,8 @@ public class UsingVehicle {
 //        hireVeh();                // Part A - Section II - (iv) - 1. Hire Vehicle
 //        hireCompleteVeh();        // Part A - Section II - (iv) - 2. Complete Hire
 //        serviceVeh();             // Part A - Section II - (iv) - 3. Service Vehicle
-//        serviceCompleteVeh();     // Part A - Section II - (iv) - 4. Complete Service
-//        showMenu();                 // Part A - Section II - (v) - Show menu and asking anymore transactions
+        serviceCompleteVeh();     // Part A - Section II - (iv) - 4. Complete Service
+//        showMenu();               // Part A - Section II - (v) - Show menu and asking anymore transactions
 //        printAllVehs();           // Part A - Section II - (vi) - Printing final detail of all vehicles with print method
 
     }
@@ -59,7 +59,7 @@ public class UsingVehicle {
     public static void filterDailyRate(double floorRate, double ceilingRate) {
         int count = 0;
         System.out.println("List the vehicles with Daily Rate between " + floorRate + " and " + ceilingRate + ": ");
-        for (int i=0; i<=vehs.length; i++) {
+        for (int i=0; i<vehs.length; i++) {
             if (floorRate <= vehs[i].getDailyRate() && vehs[i].getDailyRate() <= ceilingRate) {
                 System.out.println("ID: " + vehs[i].getID() + "  -  " + "Description: " + vehs[i].getDescription() + "  -  " + "Daily rate: " + vehs[i].getDailyRate());
                 count++;
@@ -121,12 +121,15 @@ public class UsingVehicle {
 
     // Part A - Section II - (iv) - 4. Complete Service
     public static void serviceCompleteVeh() throws StatusException, OdometerException {
-        Vehicle veh = getVehicle();
         System.out.println("You are completing servicing vehicle");
+        Vehicle veh = getVehicle();
 
         try {
+            if (!veh.getStatus().equals("S")) {
+                throw new StatusException("Vehicle is not being serviced");
+            }
             double enterOdo = enterOdoReading();
-            while (enterOdo <= veh.getOdometer()) {
+            while (enterOdo < veh.getOdometer()) {
                 System.out.println("Odometer has to be more than: " + veh.getOdometer());
                 enterOdo = enterOdoReading();
             }

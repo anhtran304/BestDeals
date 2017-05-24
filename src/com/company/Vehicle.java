@@ -104,9 +104,21 @@ public class Vehicle {
         System.out.println("**********    VEHICLE DETAILS    **********");
         System.out.println(DateTime.getCurrentTime());
         System.out.println("Vehicle ID: " + this.ID + "   " + "Description: " + this.description + "   " + "Daily Rate: " + this.dailyRate + "   " + "Odometer Reading: " + this.odometer + "   " + "Status: " + this.status);
-        if (status == "H") {
+        if (this.status.equals("H")) {
             System.out.println("Hirer: " + this.hirer + "   " + "Date/Time of hire: " + this.dateHire);
         }
+    }
+
+    public String transaction() {
+        String transaction;
+        transaction = DateTime.getCurrentTime() + "    **********\n";
+        transaction += this.getID() + ", " + this.getDescription() + ", " + this.getDailyRate() + ", " + this.getOdometer();
+        if (this.status.equals("H")) {
+            transaction += "\nHirer: " + this.hirer + "   " + "Date/Time of hire: " + this.dateHire;
+        } else if (this.status.equals("S")) {
+            transaction += "Date/Time of Servicing: " + DateTime.getCurrentTime();
+        }
+        return transaction;
     }
 
     public String convertToString() {

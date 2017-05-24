@@ -57,6 +57,7 @@ public class ManageHiring {
                     serviceCompleteVeh();
                     break;
                 case 8:
+                    System.exit(0);
                     break;
             }
             choice = anymoreTrans();
@@ -447,11 +448,13 @@ public class ManageHiring {
                 if (isCorporate(hirerID)) {
                     veh.hire(hirerID);
                     veh.print();
+                    writingToTrans("***********    Hire Vehicle on: " + veh.transaction());
                 } else if (isHiring(hirerID)) {
                     throw new StatusException("Individual Customer is only allowed hiring 1 vehicle at one time");
                 } else if (!isHiring(hirerID)) {
                     veh.hire(hirerID);
                     veh.print();
+                    writingToTrans("***********    Hire Vehicle on: " + veh.transaction());
                 }
             } else if (checCusExist(hirerID) == -1){
                 System.out.println("Customer ID is not exist");
@@ -459,13 +462,12 @@ public class ManageHiring {
                 if (newCus == 1) {
                     veh.hire(addCustomer());
                     veh.print();
+                    writingToTrans("***********    Hire Vehicle on: " + veh.transaction());
                 }
             }
         } catch (StatusException e) {
             System.out.println("Vehicle could not be hired! " + e);
-        } catch (OdometerException e) {
-            System.out.println(e);
-        } catch (Exception e) {
+        }  catch (Exception e) {
             System.out.println(e);
         }
     }
@@ -494,7 +496,6 @@ public class ManageHiring {
         }
         return askAddNewCus;
     }
-
 
     // Part C - Section III - (4) - Hire Vehicle - Check Customer is Corporate of not?
     public static boolean isCorporate(String hirerID) {
@@ -574,6 +575,7 @@ public class ManageHiring {
             System.out.println("Your discount is: " + discount);
             customers.get(checCusExist(veh.getHirer())).setPastMileage((diffOdo));
             veh.print();
+            writingToTrans("***** Complete Hire Vehicle on: " + veh.transaction());
         } catch (StatusException e) {
             System.out.println("Completing hiring vehicle could not be done! " + e);
         }
@@ -587,6 +589,8 @@ public class ManageHiring {
         try {
             veh.service();
             veh.print();
+            writingToTrans("*********** Service Vehicle on: " + veh.transaction());
+
         } catch (StatusException e) {
             System.out.println("Vehicle could not be serviced! " + e);
         }
@@ -608,6 +612,7 @@ public class ManageHiring {
             }
             veh.serviceComplete(enterOdo);
             veh.print();
+            writingToTrans("** Service Complete Vehicle on: " + veh.transaction());
         } catch (StatusException e) {
             System.out.println("Task could not be done! " + e);
         }
@@ -755,6 +760,36 @@ public class ManageHiring {
             for (int i=0; i<customers.size(); i++) {
                 bw.write(customers.get(i).convertToString() + newLine);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    // Part C - Section III - Writing to files - Writing to transactions.txt:
+    public static void writingToTrans(String transString) {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+
+        try {
+            File file = new File("transactions.txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            fw = new FileWriter(file, true);
+            bw = new BufferedWriter(fw);
+            String newLine = System.getProperty("line.separator");
+
+                bw.write(transString + newLine);
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

@@ -63,6 +63,12 @@ public class PremiumVehicle extends Vehicle {
     }
 
     @Override
+    public String transaction() {
+        String transaction = super.transaction() + "\nMileage Allowance: " + this.dailyMileage + "   " + "Service Length: " + this.serviceLength + "   " + "Last Service: " + this.odoLastService;
+        return transaction;
+    }
+
+    @Override
     public String convertToString() {
         return super.convertToString() + ", " + this.getDailyMileage() + ", " + this.getServiceLength() + ", " + this.getOdoLastService();
     }

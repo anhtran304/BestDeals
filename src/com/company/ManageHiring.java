@@ -277,15 +277,25 @@ public class ManageHiring {
     // Part C - Section III - (2) - Adding new Customer - Corporate Customer Or Not:
     public static boolean isCopCustomer() {
         boolean returnBool = false;
-        System.out.println("Is it Corporate Customer? (Y/N) ");
-        String isCopCus = keyboard.nextLine();
-        switch (isCopCus.toUpperCase()) {
-            case "Y":
-                returnBool = true;
-                break;
-            case "N":
-                returnBool = false;
-                break;
+        int anymoreChoice = 0;
+        while (anymoreChoice == 0) {
+            try {
+                System.out.println("Is it Corporate Customer? (Y/N) ");
+                char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                keyboard.nextLine();
+                if (yesNoChar == 'Y') {
+                    returnBool = true;
+                    break;
+                } else if (yesNoChar == 'N') {
+                    returnBool = false;
+                    break;
+                } else {
+                    System.out.println("Your input is not exist!");
+                    anymoreChoice = 0;
+                }
+            } catch (Exception e) {
+                System.out.println("Your input is not exist!");
+            }
         }
         return returnBool;
     }

@@ -109,8 +109,10 @@ public class ManageHiring {
             try {
                 System.out.println("Any more transactions? (Y/N): ");
                 char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                keyboard.nextLine();
                 if (yesNoChar == 'Y') {
                     anymoreChoice = choiceMenu();
+                    break;
                 } else if (yesNoChar == 'N') {
                     break;
                 } else {

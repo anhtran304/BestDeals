@@ -62,6 +62,7 @@ public class ManageHiring {
             choice = anymoreTrans();
         }
     }
+
     // Part C - Section III - Display Main Menu and Return Menu Choice
     public static int choiceMenu() {
         printMenu();
@@ -88,6 +89,8 @@ public class ManageHiring {
         System.out.println("Exit                       8");
         System.out.println("        Your Choice:        ");
     }
+
+    // Part C - Section III - Get Menu
     public static int getMenu(){
         int returnMenu = 0;
         try {
@@ -104,8 +107,7 @@ public class ManageHiring {
     // Part C - Section III - Print Menu - Anymore transactions?
     public static int anymoreTrans() {
         int anymoreChoice = 0;
-        int anymoreTrans = 0;
-        while (anymoreTrans == 0) {
+        while (anymoreChoice == 0) {
             try {
                 System.out.println("Any more transactions? (Y/N): ");
                 char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
@@ -116,7 +118,8 @@ public class ManageHiring {
                 } else if (yesNoChar == 'N') {
                     break;
                 } else {
-                    anymoreTrans = 0;
+                    System.out.println("Your input is not exist!");
+                    anymoreChoice = 0;
                 }
             } catch (Exception e) {
                 System.out.println("Your input is not exist!");
@@ -138,15 +141,25 @@ public class ManageHiring {
     // Part C - Section III - (1) - Adding new Vehicle - Vehicle Premium Or Not:
     public static boolean isPremiumVeh() {
         boolean returnBool = false;
-        System.out.println("Is it Premium Vehicle? (Y/N) ");
-        String isPremium = keyboard.nextLine();
-        switch (isPremium.toUpperCase()) {
-            case "Y":
-                returnBool = true;
-                break;
-            case "N":
-                returnBool = false;
-                break;
+        int anymoreChoice = 0;
+        while (anymoreChoice == 0) {
+            try {
+                System.out.println("Is it Premium Vehicle? (Y/N) ");
+                char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                keyboard.nextLine();
+                if (yesNoChar == 'Y') {
+                    returnBool = true;
+                    break;
+                } else if (yesNoChar == 'N') {
+                    returnBool = false;
+                    break;
+                } else {
+                    System.out.println("Your input is not exist!");
+                    anymoreChoice = 0;
+                }
+            } catch (Exception e) {
+                System.out.println("Your input is not exist!");
+            }
         }
         return returnBool;
     }
@@ -432,11 +445,12 @@ public class ManageHiring {
                 }
             } else if (checCusExist(hirerID) == -1){
                 System.out.println("Customer ID is not exist");
-                // Do you want to add newCus (Y/N)?
-                veh.hire(addCustomer());
-                veh.print();
+                int newCus = askAddNewCus();
+                if (newCus == 1) {
+                    veh.hire(addCustomer());
+                    veh.print();
+                }
             }
-
         } catch (StatusException e) {
             System.out.println("Vehicle could not be hired! " + e);
         } catch (OdometerException e) {
@@ -445,6 +459,32 @@ public class ManageHiring {
             System.out.println(e);
         }
     }
+
+    // Part C - Section III - Print Menu - Anymore transactions?
+    public static int askAddNewCus() {
+        int askAddNewCus = 0;
+        while (askAddNewCus == 0) {
+            try {
+                System.out.println("Adding new Customer? (Y/N): ");
+                char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                keyboard.nextLine();
+                if (yesNoChar == 'Y') {
+                    askAddNewCus = 1;
+                    break;
+                } else if (yesNoChar == 'N') {
+                    askAddNewCus = 2;
+                    break;
+                } else {
+                    System.out.println("Your input is not exist!");
+                    askAddNewCus = 0;
+                }
+            } catch (Exception e) {
+                System.out.println("Your input is not exist!");
+            }
+        }
+        return askAddNewCus;
+    }
+
 
     // Part C - Section III - (4) - Hire Vehicle - Check Customer is Corporate of not?
     public static boolean isCorporate(String hirerID) {

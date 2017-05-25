@@ -100,9 +100,8 @@ public class ManageHiring {
             returnMenu = Character.getNumericValue(anymoreTrans);
         } catch (Exception e) {
             System.out.println("Your input is not correct");
-        } finally {
-            return returnMenu;
         }
+        return returnMenu;
     }
 
     // Part C - Section III - Print Menu - Anymore transactions?
@@ -366,7 +365,7 @@ public class ManageHiring {
         String newID = addNewCusID();
         String newName = addNewCusName();
         String newPhone = addNewCusPhone();
-        float newDiscountRate = addNewDiscountRate();
+        double newDiscountRate = addNewDiscountRate();
 
         while (newDiscountRate >= 1 || newDiscountRate <= 0) {
             System.out.println("Discount rate should smaller than 100%, and bigger than 0%");
@@ -676,8 +675,7 @@ public class ManageHiring {
         File fileVeh = new File("vehicle.txt");
         if (!fileVeh.exists()) {
             fileVeh.createNewFile();
-        }
-        if (fileVeh.isFile()) {
+        } else if (fileVeh.isFile()) {
             Scanner sc = new Scanner(fileVeh);
             while (sc.hasNextLine()) {
                 vehs.add(countVeh, getVeh(sc.nextLine()));
@@ -687,7 +685,9 @@ public class ManageHiring {
         }
 
         File fileCus = new File("customer.txt");
-        if (fileCus.isFile()) {
+        if (!fileCus.exists()) {
+            fileCus.createNewFile();
+        } else if (fileCus.isFile()) {
             Scanner sc = new Scanner(fileCus);
             while (sc.hasNextLine()) {
                 customers.add(countCus, getCus(sc.nextLine()));

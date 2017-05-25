@@ -73,9 +73,8 @@ public class Manipulating {
             returnMenu = Character.getNumericValue(anymoreTrans);
         } catch (Exception e) {
             System.out.println("Your input is not correct");
-        } finally {
-            return returnMenu;
         }
+        return returnMenu;
     }
 
     // Part B - Section II - (ii) - Printing menu

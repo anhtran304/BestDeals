@@ -44,7 +44,6 @@ public class Vehicle {
         this.hirer = hirer;
     }
 
-
     public boolean hire(String hirerID) throws StatusException, OdometerException {
             if (this.status.equals("H")) {
                 throw new StatusException("Vehicle is being Hired");

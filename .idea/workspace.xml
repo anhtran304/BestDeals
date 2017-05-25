@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="da876ead-84aa-4678-bf16-7270eb2859ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/ManageHiring.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/Manipulating.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/Manipulating.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestDeals/com/company/UsingVehicle.class" afterPath="$PROJECT_DIR$/out/production/BestDeals/com/company/UsingVehicle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ManageHiring.java" afterPath="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Manipulating.java" afterPath="$PROJECT_DIR$/src/com/company/Manipulating.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/UsingVehicle.java" afterPath="$PROJECT_DIR$/src/com/company/UsingVehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Vehicle.java" afterPath="$PROJECT_DIR$/src/com/company/Vehicle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +20,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageHiring.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ManageHiring.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
@@ -83,6 +79,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VehicleTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/VehicleTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,21 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+            <state relative-caret-position="1035">
+              <caret line="90" column="62" lean-forward="false" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
               <folding>
                 <element signature="method#Vehicle#1;class#Vehicle#0" expanded="false" />
                 <element signature="method#Vehicle#2;class#Vehicle#0" expanded="false" />
                 <element signature="method#Vehicle#3;class#Vehicle#0" expanded="false" />
-                <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#service#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#print#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#transaction#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#convertToString#0;class#Vehicle#0" expanded="false" />
+                <element signature="e#4923#4924#0" expanded="true" />
+                <element signature="e#4948#4949#0" expanded="true" />
+                <element signature="e#4980#4981#0" expanded="true" />
+                <element signature="e#5008#5009#0" expanded="true" />
+                <element signature="e#5046#5047#0" expanded="true" />
+                <element signature="e#5080#5081#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,17 +139,12 @@
       <file leaf-file-name="PremiumVehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="67">
+              <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
               <folding>
                 <element signature="method#PremiumVehicle#0;class#PremiumVehicle#0" expanded="false" />
                 <element signature="method#PremiumVehicle#1;class#PremiumVehicle#0" expanded="false" />
                 <element signature="method#PremiumVehicle#2;class#PremiumVehicle#0" expanded="false" />
-                <element signature="method#hire#0;class#PremiumVehicle#0" expanded="false" />
-                <element signature="method#serviceComplete#0;class#PremiumVehicle#0" expanded="false" />
-                <element signature="method#hireComplete#0;class#PremiumVehicle#0" expanded="false" />
-                <element signature="method#print#0;class#PremiumVehicle#0" expanded="false" />
-                <element signature="method#transaction#0;class#PremiumVehicle#0" expanded="false" />
                 <element signature="method#convertToString#0;class#PremiumVehicle#0" expanded="false" />
               </folding>
             </state>
@@ -195,11 +196,12 @@
         <option value="$PROJECT_DIR$/src/com/company/PremiumVehicle.java" />
         <option value="$PROJECT_DIR$/transactions.txt" />
         <option value="$PROJECT_DIR$/src/com/company/CCustomer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/com/company/Manipulating.java" />
         <option value="$PROJECT_DIR$/src/com/company/UsingVehicle.java" />
         <option value="$PROJECT_DIR$/vehicle.txt" />
         <option value="$PROJECT_DIR$/src/com/company/ManageHiring.java" />
+        <option value="$PROJECT_DIR$/src/com/company/VehicleTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Vehicle.java" />
       </list>
     </option>
   </component>
@@ -486,7 +488,7 @@
     </configuration>
     <configuration default="false" name="Manipulating" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.company.ManageHiring" />
+      <option name="MAIN_CLASS_NAME" value="com.company.VehicleTest" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -529,7 +531,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25421822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3903262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -715,7 +717,7 @@
         <state relative-caret-position="198">
           <caret line="101" column="41" lean-forward="false" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
           <folding>
-            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -835,7 +837,7 @@
         <state relative-caret-position="386">
           <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="98" selection-end-column="5" />
           <folding>
-            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1063,37 +1065,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/VehicleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-679">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DateTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="58" column="49" lean-forward="false" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding>
-            <element signature="method#PremiumVehicle#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#PremiumVehicle#1;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#PremiumVehicle#2;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#hire#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#serviceComplete#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#hireComplete#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#print#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#transaction#0;class#PremiumVehicle#0" expanded="false" />
-            <element signature="method#convertToString#0;class#PremiumVehicle#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,24 +1092,6 @@
           <folding>
             <element signature="method#CCustomer#0;class#CCustomer#0" expanded="false" />
             <element signature="method#CCustomer#1;class#CCustomer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-          <folding>
-            <element signature="method#Vehicle#1;class#Vehicle#0" expanded="false" />
-            <element signature="method#Vehicle#2;class#Vehicle#0" expanded="false" />
-            <element signature="method#Vehicle#3;class#Vehicle#0" expanded="false" />
-            <element signature="method#hire#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#service#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#serviceComplete#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#print#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#transaction#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#convertToString#0;class#Vehicle#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1254,6 +1212,45 @@
             <element signature="method#writingToVeh#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToCus#0;class#ManageHiring#0" expanded="false" />
             <element signature="method#writingToTrans#0;class#ManageHiring#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/VehicleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PremiumVehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding>
+            <element signature="method#PremiumVehicle#0;class#PremiumVehicle#0" expanded="false" />
+            <element signature="method#PremiumVehicle#1;class#PremiumVehicle#0" expanded="false" />
+            <element signature="method#PremiumVehicle#2;class#PremiumVehicle#0" expanded="false" />
+            <element signature="method#convertToString#0;class#PremiumVehicle#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="90" column="62" lean-forward="false" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+          <folding>
+            <element signature="method#Vehicle#1;class#Vehicle#0" expanded="false" />
+            <element signature="method#Vehicle#2;class#Vehicle#0" expanded="false" />
+            <element signature="method#Vehicle#3;class#Vehicle#0" expanded="false" />
+            <element signature="e#4923#4924#0" expanded="true" />
+            <element signature="e#4948#4949#0" expanded="true" />
+            <element signature="e#4980#4981#0" expanded="true" />
+            <element signature="e#5008#5009#0" expanded="true" />
+            <element signature="e#5046#5047#0" expanded="true" />
+            <element signature="e#5080#5081#0" expanded="true" />
           </folding>
         </state>
       </provider>

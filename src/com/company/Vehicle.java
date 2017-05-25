@@ -46,9 +46,9 @@ public class Vehicle {
 
 
     public boolean hire(String hirerID) throws StatusException, OdometerException {
-            if (this.status == "H") {
+            if (this.status.equals("H")) {
                 throw new StatusException("Vehicle is being Hired");
-            } else if (this.status == "S") {
+            } else if (this.status.equals("S")) {
                 throw new StatusException("Vehicle is being Serviced");
             }
             else {
@@ -60,9 +60,9 @@ public class Vehicle {
         }
 
     public boolean service() throws StatusException {
-        if (this.status == "H") {
+        if (this.status.equals("H")) {
             throw new StatusException("Vehicle is being hired");
-        } else if (this.status == "S") {
+        } else if (this.status.equals("S")) {
             throw new StatusException("Vehicle is being serviced");
         }
         else {
@@ -72,9 +72,9 @@ public class Vehicle {
     }
 
     public boolean serviceComplete(double odo) throws StatusException, OdometerException {
-        if (this.status == "H") {
+        if (this.status.equals("H")) {
             throw new StatusException("Vehicle is being hired");
-        } else if (this.status == "A") {
+        } else if (this.status.equals("A")) {
             throw new StatusException("Vehicle is not being serviced");
         } else if (odo < this.odometer) {
             throw new OdometerException("Odometer reading has to be more than " + this.odometer);
@@ -88,7 +88,7 @@ public class Vehicle {
 
     public double hireComplete(double odo) throws StatusException, OdometerException {
         double basedCharge = -1.0;
-        if (this.status == "A" || this.status == "S") {
+        if (this.status.equals("A") || this.status.equals("S")) {
             throw new StatusException("Vehicle is not being hired");
         } else if (odo <= this.odometer) {
             throw new OdometerException("Odometer reading has to be more than " + this.odometer);

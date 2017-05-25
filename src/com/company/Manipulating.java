@@ -54,15 +54,28 @@ public class Manipulating {
     // Part B - Section II - (ii) - Display Main Menu and Return Menu Choice
     public static int choiceMenu() {
         printMenu();
-        int optionMenu = keyboard.nextInt();
-        keyboard.nextLine();
+        int optionMenu;
+        optionMenu = getMenu();
         while (!(optionMenu > 0 && optionMenu < 7)) {
             System.out.println("Your option is not exist! Back to Main Menu");
             printMenu();
-            optionMenu = keyboard.nextInt();
-            keyboard.nextLine();
+            optionMenu = getMenu();
         }
         return optionMenu;
+    }
+
+    // Get Menu
+    public static int getMenu(){
+        int returnMenu = 0;
+        try {
+            char anymoreTrans = Character.toUpperCase(keyboard.next().charAt(0));
+            keyboard.nextLine();
+            returnMenu = Character.getNumericValue(anymoreTrans);
+        } catch (Exception e) {
+            System.out.println("Your input is not correct");
+        } finally {
+            return returnMenu;
+        }
     }
 
     // Part B - Section II - (ii) - Printing menu

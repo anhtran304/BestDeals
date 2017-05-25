@@ -212,36 +212,82 @@ public class ManageHiring {
 
     // Part C - Section III - (1) - Adding new Vehicle - Add New Daily Rate:
     public static double addNewDailyRate() {
-        System.out.println("Enter New Daily Rate: ");
-        double newDailyRate = keyboard.nextDouble();
+        double newDailyRate = 0;
+        while (newDailyRate == 0) {
+            try {
+                System.out.println("Enter New Daily Rate: ");
+                newDailyRate = keyboard.nextDouble();
+
+            } catch (Exception e) {
+                System.out.println("Your input is not correct.");
+            } finally {
+                keyboard.nextLine();
+            }
+        }
         return newDailyRate;
     }
 
     // Part C - Section III - (1) - Adding new Vehicle - Add New Odometer:
     public static double addNewOdo() {
-        System.out.println("Enter New Odometer: ");
-        double newOdo = keyboard.nextDouble();
+        double newOdo = 0;
+        while (newOdo == 0) {
+            try {
+                System.out.println("Enter New Odometer: ");
+                newOdo = keyboard.nextDouble();
+            } catch (Exception e) {
+                System.out.println("Your input is not correct.");
+            } finally {
+                keyboard.nextLine();
+            }
+        }
         return newOdo;
     }
 
     // Part C - Section III - (1) - Adding new Premium Vehicle - Add Daily Mileage:
     public static int addDailyMileage() {
-        System.out.println("Enter New Daily Mileage: ");
-        int newDailyMileage = keyboard.nextInt();
+        int newDailyMileage = 0;
+        while (newDailyMileage == 0) {
+            try {
+                System.out.println("Enter New Daily Mileage: ");
+                newDailyMileage = keyboard.nextInt();
+            } catch (Exception e) {
+                System.out.println("Your input is not correct.");
+            } finally {
+                keyboard.nextLine();
+            }
+        }
         return newDailyMileage;
     }
 
     // Part C - Section III - (1) - Adding new Premium Vehicle - Add New Service Length:
     public static int addServiceLength() {
-        System.out.println("Enter New Service Length: ");
-        int newServiceLength = keyboard.nextInt();
+        int newServiceLength = 0;
+        while (newServiceLength == 0) {
+            try {
+                System.out.println("Enter New Service Length: ");
+                newServiceLength = keyboard.nextInt();
+            } catch (Exception e) {
+                System.out.println("Your input is not correct.");
+            } finally {
+                keyboard.nextLine();
+            }
+        }
         return newServiceLength;
     }
 
     // Part C - Section III - (1) - Adding new Premium Vehicle - Add New Odo Last Service:
     public static int addOdoLastService() {
-        System.out.println("Enter Odometer Last Service : ");
-        int newOdoLastService = keyboard.nextInt();
+        int newOdoLastService = 0;
+        while (newOdoLastService == 0) {
+            try {
+                System.out.println("Enter Odometer Last Service : ");
+                newOdoLastService = keyboard.nextInt();
+            } catch (Exception e) {
+                System.out.println("Your input is not correct.");
+            } finally {
+                keyboard.nextLine();
+            }
+        }
         return newOdoLastService;
     }
 

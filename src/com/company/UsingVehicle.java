@@ -15,9 +15,9 @@ public class UsingVehicle {
 //        getFilterDailyRate();     // Part A - Section II - (iii)
 //        hireVeh();                // Part A - Section II - (iv) - 1. Hire Vehicle
 //        hireCompleteVeh();        // Part A - Section II - (iv) - 2. Complete Hire
-        serviceVeh();             // Part A - Section II - (iv) - 3. Service Vehicle
-        serviceCompleteVeh();     // Part A - Section II - (iv) - 4. Complete Service
-//        showMenu();               // Part A - Section II - (v) - Show menu and asking anymore transactions
+//        serviceVeh();             // Part A - Section II - (iv) - 3. Service Vehicle
+//        serviceCompleteVeh();     // Part A - Section II - (iv) - 4. Complete Service
+        showMenu();               // Part A - Section II - (v) - Show menu and asking anymore transactions
 //        printAllVehs();           // Part A - Section II - (vi) - Printing final detail of all vehicles with print method
 
     }
@@ -170,15 +170,23 @@ public class UsingVehicle {
     // Part A - Section II - (v) - Anymore transactions?
     public static int anymoreTrans() {
         int anymoreChoice = 0;
-        System.out.println("Any more transactions? (Y/N): ");
-        char anymoreTrans = Character.toUpperCase(keyboard.next(".").charAt(0));
-        switch (anymoreTrans) {
-            case 'Y':
-                anymoreChoice = choiceMenu();
-                break;
-            case 'N':
-                System.exit(0);
-                break;
+        while (anymoreChoice == 0) {
+            try {
+                System.out.println("Any more transactions? (Y/N): ");
+                char yesNoChar = Character.toUpperCase(keyboard.next().charAt(0));
+                keyboard.nextLine();
+                if (yesNoChar == 'Y') {
+                    anymoreChoice = choiceMenu();
+                    break;
+                } else if (yesNoChar == 'N') {
+                    break;
+                } else {
+                    System.out.println("Your input is not exist!");
+                    anymoreChoice = 0;
+                }
+            } catch (Exception e) {
+                System.out.println("Your input is not exist!");
+            }
         }
         return anymoreChoice;
     }
@@ -194,15 +202,28 @@ public class UsingVehicle {
     // Display Main Menu and Return Menu Choice
     public static int choiceMenu() {
         printMenu();
-        int optionMenu = keyboard.nextInt();
-        keyboard.nextLine();
+        int optionMenu;
+        optionMenu = getMenu();
         while (!(optionMenu > 0 && optionMenu < 7)) {
             System.out.println("Your option is not exist! Back to Main Menu");
             printMenu();
-            optionMenu = keyboard.nextInt();
-            keyboard.nextLine();
+            optionMenu = getMenu();
         }
         return optionMenu;
+    }
+
+    // Get Menu
+    public static int getMenu(){
+        int returnMenu = 0;
+        try {
+            char anymoreTrans = Character.toUpperCase(keyboard.next().charAt(0));
+            keyboard.nextLine();
+            returnMenu = Character.getNumericValue(anymoreTrans);
+        } catch (Exception e) {
+            System.out.println("Your input is not correct");
+        } finally {
+            return returnMenu;
+        }
     }
 
     // Print Menu

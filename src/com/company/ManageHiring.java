@@ -216,7 +216,7 @@ public class ManageHiring {
             try {
                 System.out.println("Enter New Daily Rate: ");
                 newDailyRate = keyboard.nextDouble();
-
+                if (newDailyRate == 0) throw new Exception();
             } catch (Exception e) {
                 System.out.println("Your input is not correct.");
             } finally {
@@ -233,6 +233,7 @@ public class ManageHiring {
             try {
                 System.out.println("Enter New Odometer: ");
                 newOdo = keyboard.nextDouble();
+                if (newOdo == 0) throw new Exception();
             } catch (Exception e) {
                 System.out.println("Your input is not correct.");
             } finally {
@@ -249,6 +250,7 @@ public class ManageHiring {
             try {
                 System.out.println("Enter New Daily Mileage: ");
                 newDailyMileage = keyboard.nextInt();
+                if (newDailyMileage == 0) throw new Exception();
             } catch (Exception e) {
                 System.out.println("Your input is not correct.");
             } finally {
@@ -265,6 +267,7 @@ public class ManageHiring {
             try {
                 System.out.println("Enter New Service Length: ");
                 newServiceLength = keyboard.nextInt();
+                if (newServiceLength == 0) throw new Exception();
             } catch (Exception e) {
                 System.out.println("Your input is not correct.");
             } finally {
